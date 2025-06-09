@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^14.2.15",
     "@tailwindcss/postcss": "^4.1.8",
     "daisyui": "^5.0.43",
     "next": "15.3.3",
