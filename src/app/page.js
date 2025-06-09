@@ -1,4 +1,5 @@
 
+import ServiceCard from "@/components/ServiceCard";
 import Banner from "../components/Banner";
 import styles from "./page.module.css";
 
@@ -10,6 +11,7 @@ export default function Home() {
     
     
     <Banner></Banner>
+    <ServiceCard></ServiceCard>
   
    </main>
   );
