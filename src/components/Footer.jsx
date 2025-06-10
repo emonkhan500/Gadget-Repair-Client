@@ -9,7 +9,7 @@ import { IoMdTime, IoMdPin, IoMdMail } from "react-icons/io";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#1f3337] text-gray-300 py-10 px-4">
+        <footer className="bg-[#1f3337] text-gray-300 py-10 px-4 z-10">
         <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo and description */}
           <div>
