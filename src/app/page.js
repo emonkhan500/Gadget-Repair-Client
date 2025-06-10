@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     
-    <main className="  h-screen     sm:pt-20 ">
+    <main className="  sm:pt-20 ">
     
     
     
@@ -17,7 +17,7 @@ export default function Home() {
     <ServiceCard></ServiceCard>
     <WeFix></WeFix>
     <Faq></Faq>
-    <Footer></Footer>
+    {/* <Footer></Footer> */}
   
    </main>
   );
