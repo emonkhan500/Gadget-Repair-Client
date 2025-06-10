@@ -5,6 +5,7 @@ import { BsTabletLandscape } from "react-icons/bs";
 import { SiVlcmediaplayer } from "react-icons/si";
 import { IoWatchOutline } from "react-icons/io5";
 import { IoGameControllerOutline } from "react-icons/io5";
+import Letter from '@/components/serviceCompo/Letter';
 
 
 
@@ -43,7 +44,7 @@ const page = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Read More</button>
+          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
         </div>
       </div>
 
@@ -60,7 +61,7 @@ const page = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Read More</button>
+          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
         </div>
       </div>
       {/* img 1 */}
@@ -81,7 +82,7 @@ const page = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Read More</button>
+          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
         </div>
       </div>
 
@@ -98,7 +99,7 @@ const page = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Read More</button>
+          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
         </div>
       </div>
       {/* img 2 */}
@@ -118,7 +119,7 @@ const page = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Read More</button>
+          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
         </div>
       </div>
       {/* Card 6 */}
@@ -134,10 +135,11 @@ const page = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Read More</button>
+          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
         </div>
       </div>
     </div>
+    <Letter></Letter>
   </div>
   
 </div>
