@@ -5,7 +5,7 @@ import { FaGoogle } from 'react-icons/fa6';
 const page = () => {
     return (
         <div>
-            <div className='w-full lg:max-w-7xl mx-auto flex flex-col md:flex-row gap-3 mt-26'>
+            <div className='w-full lg:max-w-7xl mx-auto flex flex-col md:flex-row gap-3 mt-26 mb-20'>
                 <div className='w-full md:w-1/2'>
                     <h1>emon</h1>
                 </div>
@@ -67,28 +67,28 @@ const page = () => {
                 />
                 <span className="ml-2 text-sm text-[#253D4E]">Remember me</span>
               </label>
-              <a href="#" className="text-sm text-[#3BB77E] hover:underline">
+              <a href="#" className="text-sm text-[#253D4E] hover:underline">
                 Forgot Password?
               </a>
             </div>
             <button
               type="submit"
-              className=" w-full text-[#253D4E] font-bold py-2 px-4 rounded-lg border border-green-500 shadow-md hover:bg-[#3BB77E] hover:text-white hover:shadow-lg transition-all duration-300"
+              className=" w-full text-[#253D4E] font-bold py-2 px-4 border rounded-lg  shadow-md  hover:shadow-lg transition-all duration-300"
             >
               Sign Up
             </button>
           </form>
           <button
             
-            className=" mt-4 w-full text-[#253D4E] font-bold py-2 px-4 rounded-lg border border-green-500 shadow-md hover:bg-[#3BB77E] hover:text-white hover:shadow-lg transition-all duration-300 flex items-center justify-center"
+            className=" mt-4 w-full text-[#253D4E] font-bold py-2 px-4 rounded-lg border  shadow-md  hover:shadow-lg transition-all duration-300 flex items-center justify-center"
           >
-            <FaGoogle className="mr-3 text-[#3BB77E] hover:text-black" />
+            <FaGoogle className="mr-3 text-[#3BB77E] " />
             Sign In with Google
           </button>
 
           <p className="text-[#253D4E] mt-6 text-center font-bold">
             Already have an account?{"  "}
-            <Link href="/signin" className="font-bold text-[#3BB77E]">
+            <Link href="/signin" className="font-bold text-lg text-[#C6E76C]">
               Sign In
             </Link>
           </p>
