@@ -8,8 +8,16 @@ import login from "../../../public/login1.json";
 const page = () => {
     return (
         <div>
+          <div className='text-center mt-16 md:mt-28 mb-8'>
+         <h2 className="animate__animated animate__bounceIn animate__slow text-3xl font-bold text-[#3BB77E] lg:mt-8 mb-2 text-[#C6E76C]">
+            Welcome To Gadget Fix !
+          </h2>
+          <p className="text-[#253D4E] text-lg font-semibold">
+            Experience The Best Gadget Repairing Platform !
+          </p>
+         </div>
           
-            <div className='w-full lg:max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-6 md:gap-0 mt-16 md:mt-26 mb-20'>
+            <div className='w-full lg:max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-6 md:gap-0  mb-20'>
                 <div className='w-full md:w-1/2 '>
                 <Lottie animationData={login}  className='h-[350px] w-full'/>
                 </div>
