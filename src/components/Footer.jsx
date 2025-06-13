@@ -68,7 +68,7 @@ const Footer = () => {
             <div className=" space-x-2">
               <div className="flex items-start gap-3">
               <IoMdTime className="mt-1 text-[#c6e76c] text-lg" />
-                <p className="font-semibold">We&apos;re Open</p>
+                <p className="font-semibold">We're Open</p>
               </div>
                 <p>Monday - Saturday 08.00 - 18.00</p>
             </div>
@@ -77,7 +77,7 @@ const Footer = () => {
               <IoMdPin className="mt-1 text-[#c6e76c] text-lg" />
                 <p className="font-semibold">Workshop Location</p>
               </div>
-                <p>100 S Main St, New York, NY</p>
+                <p>1920 Tangail, Dhaka, Bangladesh</p>
             </div>
             <div className=" space-x-2">
               <div className="flex items-start gap-3">
