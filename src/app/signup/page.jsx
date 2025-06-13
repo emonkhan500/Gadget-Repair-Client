@@ -1,15 +1,19 @@
+'use client'
 import Link from 'next/link';
 import React from 'react';
 import { FaGoogle } from 'react-icons/fa6';
 
+import Lottie from "lottie-react";
+import login from "../../../public/login1.json";
 const page = () => {
     return (
         <div>
-            <div className='w-full lg:max-w-7xl mx-auto flex flex-col md:flex-row gap-3 mt-26 mb-20'>
-                <div className='w-full md:w-1/2'>
-                    <h1>emon</h1>
-                </div>
+          
+            <div className='w-full lg:max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-6 md:gap-0 mt-16 md:mt-26 mb-20'>
                 <div className='w-full md:w-1/2 '>
+                <Lottie animationData={login}  className='h-[350px] w-full'/>
+                </div>
+                <div className='w-full md:w-1/2 px-4'>
                 <form  className="mt-6">
             <div className="mb-4 ">
               <label
