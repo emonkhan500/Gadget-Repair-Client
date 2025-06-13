@@ -3,7 +3,7 @@
 import { MdClose, MdMenu } from "react-icons/md";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 
@@ -24,6 +24,7 @@ const Nav = () => {
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+    const pathName=usePathname()
     const links=[
       {
         title:'Home',
@@ -67,7 +68,7 @@ const Nav = () => {
 
   <ul className="hidden  md:flex justify-around gap-5  lg:text-xl">
    {
-    links.map((link,index)=><li key={index}><Link href={link.path}>{link.title}</Link> </li>)
+    links.map((link,index)=><li key={index}><Link className={`${pathName === link.path && 'text-[#C6E76C]'}`} href={link.path}>{link.title}</Link> </li>)
    }
   </ul>
   <div className='space-x-3'>
