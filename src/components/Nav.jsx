@@ -4,12 +4,17 @@ import { MdClose, MdMenu } from "react-icons/md";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import { useSession } from "next-auth/react";
 
 
 
 
 const Nav = () => {
+ 
+    
   const router = useRouter()
+  const session =useSession()
+  console.log(session);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
@@ -25,6 +30,9 @@ const Nav = () => {
       return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     const pathName=usePathname()
+
+
+    
     const links=[
       {
         title:'Home',
@@ -72,8 +80,15 @@ const Nav = () => {
    }
   </ul>
   <div className='space-x-3'>
-  <button onClick={handleSignIn} className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>SignIn</button>
+  {!session.data ? (
+  <>
+   <button onClick={handleSignIn} className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>SignIn</button>
   <button onClick={handleSignUp} className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>SignUp</button>
+  </>
+) : (
+  <button className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>Logout</button>
+)}
+  
   </div>
   {isOpen && (
           <aside

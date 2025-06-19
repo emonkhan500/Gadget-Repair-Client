@@ -6,20 +6,24 @@ import { FaGoogle } from 'react-icons/fa6';
 
 import Lottie from "lottie-react";
 import login from "../../../public/login1.json";
+import { useRouter } from 'next/navigation';
 
 const page = () => {
-  const handleSignIn =(e)=>{
+  const router = useRouter()
+  const handleSignIn =async (e)=>{
     e.preventDefault()
 
 
 const email = e.target.email.value;
-const pass = e.target.pass.value;
-const response = signIn('credentials',{
+const password = e.target.pass.value;
+const response = await signIn("credentials", {
   email,
-  pass,
-  redirect : false
-})
-console.log(response);
+  password,
+  redirect: false,
+});
+if(response.status ===200){
+  router.push('/')
+}
 
   }
     return (
