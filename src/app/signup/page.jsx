@@ -1,21 +1,24 @@
 'use client'
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaGoogle } from 'react-icons/fa6';
 
 import Lottie from "lottie-react";
 import login from "../../../public/login1.json";
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 const page = () => {
-
+  const router = useRouter()
+  const session =useSession()
   // social login
 const handleGoogle= async ()=>{
   const response = await signIn('google')
-  if(response.status === 'authenticated'){
-  router.push('/')
   }
-  
-  }
+  useEffect(() => {
+    if (session.status === 'authenticated') {
+      router.push('/');
+    }
+  }, [session, router]);
   
 
   const handleSignUp=async (e)=>{

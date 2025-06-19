@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {signIn, useSession} from 'next-auth/react';
 import { FaGoogle } from 'react-icons/fa6';
 
@@ -17,10 +17,11 @@ const handleGoogle= async ()=>{
 const response = await signIn('google')
 
 }
-if(session.status === 'authenticated'){
-  router.push('/')
-
-}
+useEffect(() => {
+  if (session.status === 'authenticated') {
+    router.push('/');
+  }
+}, [session, router]);
 
 
   // login with email
