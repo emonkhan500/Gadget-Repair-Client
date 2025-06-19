@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import React from 'react';
-import {signIn} from 'next-auth/react';
+import {signIn, useSession} from 'next-auth/react';
 import { FaGoogle } from 'react-icons/fa6';
 
 import Lottie from "lottie-react";
@@ -10,13 +10,15 @@ import { useRouter } from 'next/navigation';
 
 const page = () => {
   const router = useRouter()
+  const session =useSession()
 
 // social login
 const handleGoogle= async ()=>{
 const response = await signIn('google')
-if(response.status === 'authenticated'){
-router.push('/')
+
 }
+if(session.status === 'authenticated'){
+  router.push('/')
 
 }
 
