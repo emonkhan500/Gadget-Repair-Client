@@ -4,7 +4,7 @@ import { MdClose, MdMenu } from "react-icons/md";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useSession } from "next-auth/react";
+import { signOut,useSession } from "next-auth/react";
 
 
 
@@ -90,7 +90,7 @@ const Nav = () => {
   <>
   <div className="flex gap-2 justify-center items-center ">
     <img className="w-12 h-10" src={session?.data?.user?.image} alt={session?.data?.user?.name} />
-    <button className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>Logout</button>
+    <button onClick={() => signOut()} className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>Logout</button>
   </div>
   </>
   
