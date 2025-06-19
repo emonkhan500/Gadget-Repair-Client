@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Authprovider = () => {
+const AuthProvider = ({children}) => {
     return (
         <div>
-            ahthprovider
+            {children}
         </div>
     );
 };
 
-export default Authprovider;
+export default AuthProvider;
