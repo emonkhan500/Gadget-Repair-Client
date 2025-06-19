@@ -14,6 +14,9 @@ const page = () => {
 // social login
 const handleGoogle= async ()=>{
 const response = await signIn('google')
+if(response.status === 'authenticated'){
+router.push('/')
+}
 
 }
 

@@ -7,7 +7,7 @@ import GoogleProvider from "next-auth/providers/google";
 const handler = NextAuth({
   session: {
     strategy: "jwt",
-    maxAge: 30 * 24 * 60 * 60,
+    maxAge: 300 * 24 * 60 * 60,
   },
   providers: [
     CredentialsProvider({

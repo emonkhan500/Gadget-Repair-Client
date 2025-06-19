@@ -79,6 +79,7 @@ const Nav = () => {
     links.map((link,index)=><li key={index}><Link className={`${pathName === link.path && 'text-[#C6E76C]'}`} href={link.path}>{link.title}</Link> </li>)
    }
   </ul>
+  
   <div className='space-x-3'>
   {!session.data ? (
   <>
@@ -86,7 +87,13 @@ const Nav = () => {
   <button onClick={handleSignUp} className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>SignUp</button>
   </>
 ) : (
-  <button className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>Logout</button>
+  <>
+  <div className="flex gap-2 justify-center items-center ">
+    <img className="w-12 h-10" src={session?.data?.user?.image} alt={session?.data?.user?.name} />
+    <button className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>Logout</button>
+  </div>
+  </>
+  
 )}
   
   </div>

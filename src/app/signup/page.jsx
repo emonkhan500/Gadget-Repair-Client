@@ -5,7 +5,18 @@ import { FaGoogle } from 'react-icons/fa6';
 
 import Lottie from "lottie-react";
 import login from "../../../public/login1.json";
+import { signIn } from 'next-auth/react';
 const page = () => {
+
+  // social login
+const handleGoogle= async ()=>{
+  const response = await signIn('google')
+  if(response.status === 'authenticated'){
+  router.push('/')
+  }
+  
+  }
+  
 
   const handleSignUp=async (e)=>{
 e.preventDefault()
@@ -105,7 +116,7 @@ if(response.status === 200){
                 Forgot Password?
               </a>
             </div>
-            <button
+            <button 
               type="submit"
               className=" w-full text-[#253D4E] font-bold py-2 px-4 border rounded-lg  shadow-md  hover:shadow-lg transition-all duration-300"
             >
@@ -113,7 +124,7 @@ if(response.status === 200){
             </button>
           </form>
           <button
-            
+            onClick={handleGoogle}
             className=" mt-4 w-full text-[#253D4E] font-bold py-2 px-4 rounded-lg border  shadow-md  hover:shadow-lg transition-all duration-300 flex items-center justify-center"
           >
             <FaGoogle className="mr-3 text-[#3BB77E] " />
