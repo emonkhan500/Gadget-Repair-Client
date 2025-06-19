@@ -7,7 +7,7 @@ import Lottie from "lottie-react";
 import login from "../../../public/login1.json";
 const page = () => {
 
-  const handleSignUp= (e)=>{
+  const handleSignUp=async (e)=>{
 e.preventDefault()
 
 const name = e.target.name.value;
@@ -16,6 +16,14 @@ const pass = e.target.pass.value;
 // console.log(name, email, pass);
 const newUser= {name,email,pass}
 console.log(newUser);
+const response = await fetch('http://localhost:3000/signup/api',{
+  method:'POST',
+  body:JSON.stringify(newUser),
+  headers:{
+    'content-type':'application/json'
+  }
+})
+console.log(response);
   }
     return (
         <div>
