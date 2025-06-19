@@ -1,5 +1,8 @@
+import { MongoClient, ServerApiVersion } from "mongodb";
+
 let db;
 export const connectDB =async ()=>{
+  console.log(' Using existing MongoDB connection');
     if(db) return db;
     try{
         const uri =process.env.NEXT_PUBLIC_MONGODB_URI
@@ -11,6 +14,7 @@ export const connectDB =async ()=>{
             },
           });
           db= client.db('gadget-repair')
+          console.log('✅ Using existing MongoDB connection');
           return db;
         } catch(error){
             console.log(error);

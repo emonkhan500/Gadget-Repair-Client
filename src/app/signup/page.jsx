@@ -6,6 +6,17 @@ import { FaGoogle } from 'react-icons/fa6';
 import Lottie from "lottie-react";
 import login from "../../../public/login1.json";
 const page = () => {
+
+  const handleSignUp= (e)=>{
+e.preventDefault()
+
+const name = e.target.name.value;
+const email = e.target.email.value;
+const pass = e.target.pass.value;
+// console.log(name, email, pass);
+const newUser= {name,email,pass}
+console.log(newUser);
+  }
     return (
         <div>
           <div className='text-center mt-16 md:mt-28 mb-8'>
@@ -22,7 +33,7 @@ const page = () => {
                 <Lottie animationData={login}  className='h-[350px] w-full'/>
                 </div>
                 <div className='w-full md:w-1/2 px-4'>
-                <form  className="mt-6">
+                <form onSubmit={handleSignUp} className="mt-6">
             <div className="mb-4 ">
               <label
                 className="text-[#253D4E] block  text-sm font-bold mb-2"
