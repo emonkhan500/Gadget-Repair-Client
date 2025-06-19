@@ -24,9 +24,9 @@ const response = await fetch('http://localhost:3000/signup/api',{
   }
 })
 console.log(response);
-// if(response){
-//   e.target.reset()
-// }
+if(response.status === 200){
+  e.target.reset()
+}
   }
     return (
         <div>

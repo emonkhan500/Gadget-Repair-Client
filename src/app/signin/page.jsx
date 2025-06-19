@@ -1,12 +1,27 @@
 'use client'
 import Link from 'next/link';
 import React from 'react';
+import {signIn} from 'next-auth/react';
 import { FaGoogle } from 'react-icons/fa6';
 
 import Lottie from "lottie-react";
 import login from "../../../public/login1.json";
 
 const page = () => {
+  const handleSignIn =(e)=>{
+    e.preventDefault()
+
+
+const email = e.target.email.value;
+const pass = e.target.pass.value;
+const response = signIn('credentials',{
+  email,
+  pass,
+  redirect : false
+})
+console.log(response);
+
+  }
     return (
         <div>
           
@@ -21,7 +36,7 @@ const page = () => {
           
             <div className='w-full lg:max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-6 md:gap-0  mb-20'>
                 <div className='w-full md:w-1/2 px-4'>
-                <form  className="mt-6">
+                <form onSubmit={handleSignIn} className="mt-6">
            
             <div className="mb-4 animate__animated animate__lightSpeedInLeft animate__slow">
               <label
