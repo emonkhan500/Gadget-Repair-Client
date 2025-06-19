@@ -10,6 +10,15 @@ import { useRouter } from 'next/navigation';
 
 const page = () => {
   const router = useRouter()
+
+// social login
+const handleGoogle= async ()=>{
+
+
+}
+
+
+  // login with email
   const handleSignIn =async (e)=>{
     e.preventDefault()
 

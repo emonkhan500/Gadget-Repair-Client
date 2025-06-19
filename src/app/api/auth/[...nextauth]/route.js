@@ -2,6 +2,7 @@ import { connectDB } from "@/lib/connectDB";
 import NextAuth from "next-auth"; 
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
+import GoogleProvider from "next-auth/providers/google";
 
 const handler = NextAuth({
   session: {
@@ -34,6 +35,10 @@ const handler = NextAuth({
        return currentUser;
       },
     }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET
+    })
   ],
   callbacks: {},
   pages: {
