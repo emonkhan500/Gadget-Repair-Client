@@ -13,7 +13,7 @@ const page = () => {
 
 // social login
 const handleGoogle= async ()=>{
-
+const response = await signIn('google')
 
 }
 
@@ -102,7 +102,7 @@ if(response.status ===200){
               Sign In
             </button>
           </form>
-          <button
+          <button onClick={handleGoogle}
             
             className=" mt-4 w-full text-[#253D4E] font-bold py-2 px-4 rounded-lg border  shadow-md  hover:shadow-lg transition-all duration-300 flex items-center justify-center"
           >
