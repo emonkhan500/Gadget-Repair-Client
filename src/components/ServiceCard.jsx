@@ -3,17 +3,10 @@ import { IoLaptopOutline } from "react-icons/io5";
 import { BsTabletLandscape } from "react-icons/bs";
 import { SiVlcmediaplayer } from "react-icons/si";
 
-const getServiceData = async()=>{
-  const res = await fetch('http://localhost:3000/service/api/get-all')
-  const serviceAll =res.json()
-  return serviceAll
-}
-const ServiceCard =async () => {
-const service= await getServiceData()
-
-console.log(service);
+const ServiceCard = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-1 xl:gap-6 mt-5 md:mt-10 px-3 md:px-16 lg:px-3 xl:px-28">
+      
       
       {/* Card 1 */}
       <div className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IoMdCheckmark } from "react-icons/io";
 
 const Banner = () => {
@@ -43,10 +44,10 @@ const Banner = () => {
               We use only high-quality parts for all repairs
             </p>
           </div>
-          <div className=" ">
-          <button className="w-full md:w-auto px-7 py-3 rounded-full bg-[#4d6c77] text-white">
+          <div className="mt-4 ">
+          <Link href='/bookrepair' className="w-full md:w-auto px-7 py-3 rounded-full bg-[#4d6c77] text-white">
             Book a Repair
-          </button>
+          </Link>
           </div>
         </div>
       </div>
