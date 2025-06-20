@@ -69,10 +69,12 @@ const page = () => {
             <div>
               <label className="block mb-1 font-medium">Choose Gadget</label>
               <select className="w-full border border-gray-200 rounded-lg text-gray-700 p-2">
-                <option>Choose Device</option>
-                <option>iPhone</option>
-                <option>Samsung</option>
+                <option>Phone</option>
+                <option>Laptop</option>
                 <option>Tablet</option>
+                <option>Smartwatch</option>
+                <option>Software</option>
+                <option>Game</option>
               </select>
             </div>
             <div>

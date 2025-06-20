@@ -48,6 +48,10 @@ const Nav = () => {
         path:'/bookrepair'
       },
       {
+        title:'Track Repair',
+        path:'/trackbook'
+      },
+      {
         title:'Contact',
         path:'/contact'
       },
@@ -89,7 +93,7 @@ const Nav = () => {
 ) : (
   <>
   <div className="flex gap-2 justify-center items-center ">
-    <img className="w-12 h-10" src={session?.data?.user?.image} alt={session?.data?.user?.name} />
+    <img className="w-12 h-10 pb-2" src={session?.data?.user?.image} alt={session?.data?.user?.name} />
     <button onClick={() => signOut()} className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>Logout</button>
   </div>
   </>
