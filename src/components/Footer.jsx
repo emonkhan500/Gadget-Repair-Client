@@ -6,6 +6,7 @@ import {BsLinkedin} from "react-icons/bs";
 import { FaGithub } from 'react-icons/fa6';
 import { BiLogoMicrosoft } from "react-icons/bi";
 import { IoMdTime, IoMdPin, IoMdMail } from "react-icons/io";
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -40,13 +41,13 @@ const Footer = () => {
           {/* Company Links */}
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 ">
-              <li>Home</li>
-              <li>All Services</li>
-              <li>Track My Repair</li>
-              <li>Book a Repair</li>
-              <li>Blog</li>
-              <li>Contact</li>
+            <ul className="space-y-2  flex flex-col">
+              <Link href='/'>Home</Link >
+              <Link href='/service'>All Services</Link >
+              <Link href='/trackbook'>Track My Repair</Link >
+              <Link href='/bookrepair'>Book a Repair</Link >
+              
+              <Link href='/contact'>Contact</Link >
             </ul>
           </div>
   
