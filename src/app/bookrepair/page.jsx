@@ -4,6 +4,7 @@ import { useSession } from "next-auth/react";
 import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { LuAlarmClock } from "react-icons/lu";
+import { ToastContainer, toast } from "react-toastify";
 
 const page = () => {
   const { data } = useSession();
@@ -28,12 +29,13 @@ const page = () => {
       }
   })
   const response =await resp?.json()
-  // toast.success(response?.message)
+  toast.success(response?.message)
   e.target.reset()
     // console.log("Form Data:", formData);
   };
   return (
     <div>
+      <ToastContainer/>
       <div className="relative px-4 md:px-16 lg:px-36">
         <div
           className="absolute inset-0 bg-cover bg-center"
