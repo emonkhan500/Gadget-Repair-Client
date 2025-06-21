@@ -3,7 +3,7 @@ import ShareHead from '@/components/ShareHead/ShareHead';
 import { useSession } from 'next-auth/react';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 const page = () => {
   const params = useParams()
@@ -15,17 +15,21 @@ const page = () => {
     const bookingDetail = await fetch(
       `http://localhost:3000/trackbook/api/deletebook/${params.id}`
     );
+    
     const data = await bookingDetail.json();
     setBooking(data.data);
+    
   };
+  console.log(booking.gadget);
 
   const handleUpdateBooking = async (event) => {
     event.preventDefault();
     const updatedBooking = {
       date: event.target.date.value,
+      problem: event.target.problem.value,
       phone: event.target.phone.value,
-      address: event.target.address.value,
     };
+    console.log(updatedBooking);
     const resp = await fetch(
       `http://localhost:3000/trackbook/api/deletebook/${params.id}`,
       {
@@ -69,29 +73,28 @@ const page = () => {
         <div className="max-w-7xl mx-auto px-4 py-12  gap-10 z-10">
           {/* Form Section */}
           <div className="lg:col-span-2">
-            <form className="space-y-6" >
+            <form onSubmit={handleUpdateBooking} className="space-y-6" >
               {/* Gadget & Model */}
               <div className="grid md:grid-cols-3 gap-4">
-                <div>
-                  <label className="block mb-1 font-medium">Choose Gadget</label>
-                  <select
-                    name="gadget"
+              <div>
+  <label className="block mb-1 font-medium">Choose Gadget</label>
+  <input
+                  defaultValue={booking.gadget}
+                    readOnly
+                    type="text"
+                    name="model"
+                    placeholder="iPhone 15 Pro Max"
                     className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-                  >
-                    <option>Phone</option>
-                    <option>Laptop</option>
-                    <option>Tablet</option>
-                    <option>Smartwatch</option>
-                    <option>Software</option>
-                    <option>Game</option>
-                  </select>
-                </div>
+                  />
+</div>
+
                 <div>
                   <label className="block mb-1 font-medium">
                     Model of Gadget
                   </label>
                   <input
-                    required
+                  defaultValue={booking.model}
+                    readOnly
                     type="text"
                     name="model"
                     placeholder="iPhone 15 Pro Max"
@@ -99,10 +102,10 @@ const page = () => {
                   />
                 </div>
                 <div>
-                  <label className="block mb-1 font-medium">Choose Date</label>
+                  <label className="block mb-1 font-medium">Delivery Date</label>
                   <input
-                  readOnly
-                    defaultValue={new Date().toISOString().split("T")[0]}
+                 defaultValue={booking.date}
+                    type='date'
                     name="date"
                     className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
                   />
@@ -115,7 +118,8 @@ const page = () => {
                   Problem With Gadget?
                 </label>
                 <textarea
-                  required
+                defaultValue={booking.problem}
+                  
                   name="problem"
                   rows="4"
                   placeholder="Write your gadget problem"
@@ -142,6 +146,7 @@ const page = () => {
                   className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
                 />
                 <input
+                defaultValue={booking.phone}
     type="text"
     name="phone"
     placeholder="Phone"
@@ -158,6 +163,7 @@ const page = () => {
   
               {/* Submit Button */}
               <button
+              
                 type="submit"
                 className=" w-full bg-gray-700 text-white px-6 py-2 rounded-full hover:bg-gray-800"
               >

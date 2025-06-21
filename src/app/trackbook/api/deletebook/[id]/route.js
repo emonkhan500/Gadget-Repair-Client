@@ -30,9 +30,9 @@ export const PATCH = async (request, { params }) => {
           upsert : true
         }
       );
-      return NextResponse.json({ message: "updated the booking", response: resp });
+      return Response.json({ message: "updated the booking", response: resp });
     } catch (error) {
-      return NextResponse.json({ message: "Something Went Wrong" });
+      return Response.json({ message: "Something Went Wrong" });
     }
   };
   
@@ -43,9 +43,9 @@ export const PATCH = async (request, { params }) => {
       const resp = await bookingsCollection.findOne({
         _id: new ObjectId(params.id),
       });
-      return NextResponse.json({ message: "booking found", 
+      return Response.json({ message: "booking found", 
         data: resp });
     } catch (error) {
-      return NextResponse.json({ message: "Something Went Wrong" });
+      return Response.json({ message: "Something Went Wrong" });
     }
   };

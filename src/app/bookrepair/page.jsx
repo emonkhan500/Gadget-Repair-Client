@@ -133,14 +133,14 @@ const page = () => {
                 />
               </div>
               <div>
-                <label className="block mb-1 font-medium">Choose Date</label>
-                <input
-                readOnly
-                  defaultValue={new Date().toISOString().split("T")[0]}
-                  name="date"
-                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-                />
-              </div>
+                  <label className="block mb-1 font-medium">Delivery Date</label>
+                  <input
+                 
+                    type='date'
+                    name="date"
+                    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+                  />
+                </div>
             </div>
 
             {/* Problem */}
