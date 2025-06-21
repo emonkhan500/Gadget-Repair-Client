@@ -16,7 +16,7 @@ const ShareHead = ({upTitle, pageTitle}) => {
 
   <div className="flex items-center gap-4 justify-center mt-3  font-medium"> 
     
-    <h1 className="text-[#7E7E7E]  flex justify-center items-center gap-2 text-5xl text-white font-bold mb-10"> {pageTitle}</h1>
+    <h1 className="text-[#7E7E7E]  flex justify-center items-center gap-2 text-3xl md:text-5xl text-white font-bold mb-10"> {pageTitle}</h1>
   </div>
 </div>
    

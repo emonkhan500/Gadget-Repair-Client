@@ -93,7 +93,11 @@ const Nav = () => {
 ) : (
   <>
   <div className="flex gap-2 justify-center items-center ">
-    <img className="w-12 h-10 pb-2" src={session?.data?.user?.image} alt={session?.data?.user?.name} />
+    <img className="w-12 h-10 rounded-full text-[#C6E76C]"  src={
+                session?.data?.user?.image
+                  ? session?.data?.user?.image
+                  : "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop"
+              } alt={session?.data?.user?.name} />
     <button onClick={() => signOut()} className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>Logout</button>
   </div>
   </>
