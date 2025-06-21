@@ -14,7 +14,7 @@ export const connectDB =async ()=>{
             },
           });
           db= client.db('gadget-repair')
-          console.log('✅ Using existing MongoDB connection');
+          console.log(' Using existing MongoDB connection');
           return db;
         } catch(error){
             console.log(error);

@@ -90,12 +90,12 @@ const page = () => {
                   
                       {/* Buttons */}
                       <td>
-                        <Link href={`/trackbook/update/${book._id}`} className="btn btn-ghost btn-lg">
+                        <Link href={`/trackbook/update/${book._id}`} className="btn text-[#C6E76C] btn-ghost btn-xl">
                           <MdOutlineSecurityUpdate />
                         </Link>
                       </td>
                       <td>
-                        <button onClick={()=>handleDelete(book._id)} className="btn btn-ghost btn-lg">
+                        <button onClick={()=>handleDelete(book._id)} className="btn text-[#C6E76C] btn-ghost btn-lg">
                           <FaRegTrashAlt />
                         </button>
                       </td>
