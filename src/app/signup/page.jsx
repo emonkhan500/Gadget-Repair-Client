@@ -6,20 +6,13 @@ import { FaGoogle } from 'react-icons/fa6';
 import Lottie from "lottie-react";
 import login from "../../../public/login1.json";
 import { signIn, useSession } from 'next-auth/react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 const page = () => {
   const router = useRouter()
   const session =useSession()
-  const searchParams = useSearchParams();
-  const path = searchParams.get("redirect");
-
-  
   // social login
 const handleGoogle= async ()=>{
-  const response = await signIn('google',{
-    redirect: true,
-    callbackUrl: path ? path : "/",
-  })
+  const response = await signIn('google')
   }
   useEffect(() => {
     if (session.status === 'authenticated') {
