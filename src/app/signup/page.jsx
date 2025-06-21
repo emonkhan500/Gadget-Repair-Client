@@ -15,8 +15,9 @@ const handleGoogle= async ()=>{
   const response = await signIn('google')
   }
   useEffect(() => {
-    if (session.status === 'authenticated') {
-      router.push('/');
+    if (session?.status === "loading") return;
+    if (session?.status === "authenticated") {
+      router.push("/");
     }
   }, [session, router]);
   

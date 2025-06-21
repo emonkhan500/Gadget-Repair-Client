@@ -11,13 +11,18 @@ import Link from "next/link";
 const page = () => {
   const session = useSession();
   const [bookings, setBooking] = useState([]);
+
+  // 
   const loadData = async () => {
+    if (!session?.data?.user?.email) return;
+  
     const resp = await fetch(
-      `http://localhost:3000/trackbook/api/${session?.data?.user?.email}`
+      `http://localhost:3000/trackbook/api/${session.data.user.email}`
     );
     const data = await resp.json();
-    setBooking(data?.myBookings);
+    setBooking(data?.myBookings || []);
   };
+  
   console.log(bookings);
   // delete
   const handleDelete = async (id) => {
@@ -33,7 +38,9 @@ const page = () => {
     }
   };
   useEffect(() => {
-    loadData();
+    if (session.status === "authenticated") {
+      loadData();
+    }
   }, [session]);
 
   return (
