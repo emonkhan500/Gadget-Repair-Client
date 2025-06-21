@@ -6,6 +6,7 @@ import { CiEdit } from "react-icons/ci";
 import { MdOutlineSecurityUpdate } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 const page = () => {
   const session = useSession();
@@ -89,9 +90,9 @@ const page = () => {
                   
                       {/* Buttons */}
                       <td>
-                        <button className="btn btn-ghost btn-lg">
+                        <Link href={`/trackbook/update/${book._id}`} className="btn btn-ghost btn-lg">
                           <MdOutlineSecurityUpdate />
-                        </button>
+                        </Link>
                       </td>
                       <td>
                         <button onClick={()=>handleDelete(book._id)} className="btn btn-ghost btn-lg">
