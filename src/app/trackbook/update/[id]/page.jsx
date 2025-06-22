@@ -13,7 +13,7 @@ const page = () => {
 
   const loadBooking = async () => {
     const bookingDetail = await fetch(
-      `http://localhost:3000/trackbook/api/deletebook/${params.id}`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/deletebook/${params.id}`
     );
     
     const data = await bookingDetail.json();
@@ -31,7 +31,7 @@ const page = () => {
     };
     console.log(updatedBooking);
     const resp = await fetch(
-      `http://localhost:3000/trackbook/api/deletebook/${params.id}`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/deletebook/${params.id}`,
       {
         method: "PATCH",
         body: JSON.stringify(updatedBooking),

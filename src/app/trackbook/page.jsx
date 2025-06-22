@@ -17,7 +17,7 @@ const page = () => {
     if (!session?.data?.user?.email) return;
   
     const resp = await fetch(
-      `http://localhost:3000/trackbook/api/${session.data.user.email}`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/${session.data.user.email}`
     );
     const data = await resp.json();
     setBooking(data?.myBookings || []);
@@ -27,7 +27,7 @@ const page = () => {
   // delete
   const handleDelete = async (id) => {
     const deleted = await fetch(
-      `http://localhost:3000/trackbook/api/deletebook/${id}`, {
+      `${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/deletebook/${id}`, {
         method : "DELETE",
       }
     );

@@ -1,7 +1,7 @@
 import React from "react";
 
 const getServiceData = async () => {
-  const res = await fetch("http://localhost:3000/service/api/get-all");
+  const res = await fetch("${process.env.NEXT_PUBLIC_BASE_URL}/service/api/get-all");
   const serviceAll = res.json();
   return serviceAll;
 };

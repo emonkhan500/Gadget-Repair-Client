@@ -31,7 +31,7 @@ const password = e.target.pass.value;
 // console.log(name, email, pass);
 const newUser= {name,email,password}
 console.log(newUser);
-const response = await fetch('http://localhost:3000/signup/api',{
+const response = await fetch('${process.env.NEXT_PUBLIC_BASE_URL}/signup/api',{
   method:'POST',
   body:JSON.stringify(newUser),
   headers:{
