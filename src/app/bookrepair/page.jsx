@@ -21,7 +21,7 @@ const page = () => {
       phone: e.target.phone.value,
     };
 
-    const resp = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/bookrepair/api/booking`, {
+    const resp = await fetch(`/bookrepair/api/booking`, {
       method: 'POST',
       body: JSON.stringify(bookingData),
       headers : {
