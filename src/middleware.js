@@ -8,9 +8,9 @@ export const middleware = async (request) => {
       return NextResponse.next();
   }
 
-  if (!token) {
-    return NextResponse.redirect(new URL(`/signin?redirect=${pathname}`, request.url));
-  }
+  // if (!token) {
+  //   return NextResponse.redirect(new URL(`/signin?redirect=${pathname}`, request.url));
+  // }
   return NextResponse.next();
 };
 

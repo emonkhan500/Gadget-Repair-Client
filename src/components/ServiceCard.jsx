@@ -2,6 +2,7 @@ import { IoIosPhonePortrait } from "react-icons/io";
 import { IoLaptopOutline } from "react-icons/io5";
 import { BsTabletLandscape } from "react-icons/bs";
 import { SiVlcmediaplayer } from "react-icons/si";
+import Link from "next/link";
 
 const ServiceCard = () => {
   return (
@@ -21,7 +22,7 @@ const ServiceCard = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</button>
+          <Link href='/service' className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</Link>
         </div>
       </div>
 
@@ -38,7 +39,7 @@ const ServiceCard = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</button>
+        <Link href='/service' className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</Link>
         </div>
       </div>
 
@@ -55,7 +56,7 @@ const ServiceCard = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</button>
+        <Link href='/service' className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</Link>
         </div>
       </div>
 
@@ -72,7 +73,7 @@ const ServiceCard = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</button>
+        <Link href='/service' className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</Link>
         </div>
       </div>
     </div>
