@@ -12,28 +12,27 @@ const page = () => {
   const session = useSession();
   const [bookings, setBooking] = useState([]);
 
-  // 
+  //
   const loadData = async () => {
     if (!session?.data?.user?.email) return;
-  
-    const resp = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/${session.data.user.email}`
+
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/${session.data.user.email}`
     );
     const data = await resp.json();
     setBooking(data?.myBookings || []);
   };
-  
+
   console.log(bookings);
   // delete
   const handleDelete = async (id) => {
-    const deleted = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/deletebook/${id}`, {
-        method : "DELETE",
+    const deleted = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/deletebook/${id}`,
+      {
+        method: "DELETE",
       }
     );
     const resp = await deleted.json();
-    if(resp?.response?.deletedCount >  0) {
-      toast.success(resp?.message)
+    if (resp?.response?.deletedCount > 0) {
+      toast.success(resp?.message);
       loadData();
     }
   };
@@ -45,7 +44,7 @@ const page = () => {
 
   return (
     <div>
-       <ToastContainer/>
+      <ToastContainer />
       <div className="relative pt-10 px-2  lg:px-36">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -81,35 +80,41 @@ const page = () => {
               <tbody className="bg-gray-500">
                 {/* row 1 */}
 
-                
-                  {bookings.map((book, index) => (
-                    <tr key={book._id || index} className="border-b-2 border-slate-100">
-                      {/* Serial Number */}
-                      <td className="text-lg font-bold">{index + 1}</td>
-                  
-                      {/* Dynamic Data */}
-                      <td className="text-lg font-bold">{book?.gadget}</td>
-                      <td className="text-lg font-bold">{book?.model}</td>
-                      <td className="text-lg font-medium">{book?.problem}</td>
-                      <td className="text-lg font-bold">{book?.date}</td>
-                      <td className="text-lg font-bold">{book?.name}</td>
-                      <td className="text-lg font-bold">{book?.phone}</td>
-                  
-                      {/* Buttons */}
-                      <td>
-                        <Link href={`/trackbook/update/${book._id}`} className="btn text-[#C6E76C] btn-ghost btn-xl">
-                          <MdOutlineSecurityUpdate />
-                        </Link>
-                      </td>
-                      <td>
-                        <button onClick={()=>handleDelete(book._id)} className="btn text-[#C6E76C] btn-ghost btn-lg">
-                          <FaRegTrashAlt />
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                
-              
+                {bookings.map((book, index) => (
+                  <tr
+                    key={book._id || index}
+                    className="border-b-2 border-slate-100"
+                  >
+                    {/* Serial Number */}
+                    <td className="text-lg font-bold">{index + 1}</td>
+
+                    {/* Dynamic Data */}
+                    <td className="text-lg font-bold">{book?.gadget}</td>
+                    <td className="text-lg font-bold">{book?.model}</td>
+                    <td className="text-lg font-medium">{book?.problem}</td>
+                    <td className="text-lg font-bold">{book?.date}</td>
+                    <td className="text-lg font-bold">{book?.name}</td>
+                    <td className="text-lg font-bold">{book?.phone}</td>
+
+                    {/* Buttons */}
+                    <td>
+                      <Link
+                        href={`/trackbook/update/${book._id}`}
+                        className="btn text-[#C6E76C] btn-ghost btn-xl"
+                      >
+                        <MdOutlineSecurityUpdate />
+                      </Link>
+                    </td>
+                    <td>
+                      <button
+                        onClick={() => handleDelete(book._id)}
+                        className="btn text-[#C6E76C] btn-ghost btn-lg"
+                      >
+                        <FaRegTrashAlt />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
