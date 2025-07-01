@@ -1,4 +1,5 @@
 'use client'
+import { useGetBookingByIdQuery, useUpdateBookingMutation } from '@/allApi/allApi';
 import ShareHead from '@/components/ShareHead/ShareHead';
 import { useSession } from 'next-auth/react';
 import { useParams } from 'next/navigation';
@@ -7,47 +8,38 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const page = () => {
   const params = useParams()
-  // console.log(params.id);
-    const { data } =useSession()
+  
     const [booking, setBooking] = useState([]);
+    const [updateBooking] = useUpdateBookingMutation();
+    const { data, error, isLoading } = useGetBookingByIdQuery(params.id);
+    useEffect(() => {
+      if (!isLoading && data?.data) {
+        setBooking(data.data);
+      }
+    }, [data, isLoading]);
 
-  const loadBooking = async () => {
-    const bookingDetail = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/deletebook/${params.id}`
-    );
-    
-    const data = await bookingDetail.json();
-    setBooking(data.data);
-    
-  };
-  console.log(booking.gadget);
+  
+  
 
   const handleUpdateBooking = async (event) => {
     event.preventDefault();
-    const updatedBooking = {
+  
+    const updatedData = {
       date: event.target.date.value,
       problem: event.target.problem.value,
       phone: event.target.phone.value,
     };
-    console.log(updatedBooking);
-    const resp = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/deletebook/${params.id}`,
-      {
-        method: "PATCH",
-        body: JSON.stringify(updatedBooking),
-        headers: {
-          "content-type": "application/json",
-        },
-      }
-    );
-    if(resp.status === 200) {
-      toast.success("Updated Successfully")
+  
+    try {
+      const res = await updateBooking({ id: params.id, updatedData }).unwrap();
+      toast.success("Updated Successfully");
+    } catch (err) {
+      toast.error("Update failed");
+      console.error(err);
     }
   };
 
-  useEffect(() => {
-    loadBooking();
-  }, [params]);
+  
     return (
         <div>
         <ToastContainer/>
@@ -79,7 +71,7 @@ const page = () => {
               <div>
   <label className="block mb-1 font-medium">Choose Gadget</label>
   <input
-                  defaultValue={booking.gadget}
+                  defaultValue={booking?.gadget}
                     readOnly
                     type="text"
                     name="model"
@@ -93,7 +85,7 @@ const page = () => {
                     Model of Gadget
                   </label>
                   <input
-                  defaultValue={booking.model}
+                  defaultValue={booking?.model}
                     readOnly
                     type="text"
                     name="model"
@@ -104,7 +96,7 @@ const page = () => {
                 <div>
                   <label className="block mb-1 font-medium">Delivery Date</label>
                   <input
-                 defaultValue={booking.date}
+                 defaultValue={booking?.date}
                     type='date'
                     name="date"
                     className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
@@ -118,7 +110,7 @@ const page = () => {
                   Problem With Gadget?
                 </label>
                 <textarea
-                defaultValue={booking.problem}
+                defaultValue={booking?.problem}
                   
                   name="problem"
                   rows="4"
@@ -146,7 +138,7 @@ const page = () => {
                   className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
                 />
                 <input
-                defaultValue={booking.phone}
+                defaultValue={booking?.phone}
     type="text"
     name="phone"
     placeholder="Phone"

@@ -1,4 +1,6 @@
 "use client";
+import { useCreateBookingMutation } from "@/allApi/allApi";
+
 import ShareHead from "@/components/ShareHead/ShareHead";
 import { useSession } from "next-auth/react";
 import React from "react";
@@ -8,6 +10,8 @@ import { ToastContainer, toast } from "react-toastify";
 
 const page = () => {
   const { data } = useSession();
+  const [createBooking, { isLoading: isCreating }] = useCreateBookingMutation();
+
   const handleSubmit =async (e) => {
     e.preventDefault();
 
@@ -21,17 +25,14 @@ const page = () => {
       phone: e.target.phone.value,
     };
 
-    const resp = await fetch(`/bookrepair/api/booking`, {
-      method: 'POST',
-      body: JSON.stringify(bookingData),
-      headers : {
-          "content-type" : "application/json"
-      }
-  })
-  const response =await resp?.json()
-  toast.success(response?.message)
-  e.target.reset()
-    // console.log("Form Data:", formData);
+    try {
+      const response = await createBooking(bookingData).unwrap();
+      toast.success(response?.message);
+      e.target.reset();
+    } catch (err) {
+      toast.error("Something went wrong!");
+      console.error(err);
+    }
   };
   return (
     <div>
@@ -193,6 +194,7 @@ const page = () => {
             {/* Submit Button */}
             <button
               type="submit"
+              disabled={isCreating}
               className="bg-gray-700 text-white px-6 py-2 rounded-full hover:bg-gray-800"
             >
               Book Now

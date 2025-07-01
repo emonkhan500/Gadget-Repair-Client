@@ -7,40 +7,33 @@ import { MdOutlineSecurityUpdate } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { useDeleteBookingMutation, useGetBookingQuery } from "@/allApi/allApi";
 
 const page = () => {
-  const session = useSession();
   const [bookings, setBooking] = useState([]);
+  const session = useSession();
+  const email = session?.data?.user?.email;
 
-  //
-  const loadData = async () => {
-    if (!session?.data?.user?.email) return;
+  const { data, error, isLoading, refetch } = useGetBookingQuery(email, {
+    skip: !email,
+  });
 
-    const resp = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/${session.data.user.email}`
-    );
-    const data = await resp.json();
-    setBooking(data?.myBookings || []);
-  };
+  const [deleteBooking] = useDeleteBookingMutation();
 
-  console.log(bookings);
   // delete
   const handleDelete = async (id) => {
-    const deleted = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/trackbook/api/deletebook/${id}`,
-      {
-        method: "DELETE",
+    try {
+      const response = await deleteBooking(id).unwrap();
+      if (response?.response?.deletedCount > 0) {
+        toast.success(response?.message);
+        refetch() 
       }
-    );
-    const resp = await deleted.json();
-    if (resp?.response?.deletedCount > 0) {
-      toast.success(resp?.message);
-      loadData();
+    } catch (err) {
+      console.error(err);
+      toast.error("Failed to delete booking.");
     }
+    
   };
-  useEffect(() => {
-    if (session.status === "authenticated") {
-      loadData();
-    }
-  }, [session]);
 
   return (
     <div>
@@ -80,7 +73,7 @@ const page = () => {
               <tbody className="bg-gray-500">
                 {/* row 1 */}
 
-                {bookings.map((book, index) => (
+                {data?.myBookings.map((book, index) => (
                   <tr
                     key={book._id || index}
                     className="border-b-2 border-slate-100"
