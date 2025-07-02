@@ -4,7 +4,11 @@ import React from "react";
 
 const WeFix = () => {
   const { data, isLoading, error } = useGetAllServicesQuery();
-  if (isLoading) return <p>Loading services...</p>;
+  if (isLoading){ 
+    return <div className="text-center mt-10">
+      <span className="text-center loading loading-spinner loading-xl"></span>
+    </div>
+  };
   const serviceData = data?.services
   console.log(data?.services);
   return (
