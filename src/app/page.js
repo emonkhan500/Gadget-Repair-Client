@@ -18,6 +18,7 @@ export default function Home() {
     <ServiceCard></ServiceCard>
     <WeFix></WeFix>
     <Partners></Partners>
+    
     <Faq></Faq>
   
    </main>
