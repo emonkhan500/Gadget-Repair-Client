@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import WeFix from "@/components/WeFix";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
+import Partners from "@/components/Partners";
 
 export default function Home() {
   return (
@@ -16,8 +17,8 @@ export default function Home() {
     <Banner></Banner>
     <ServiceCard></ServiceCard>
     <WeFix></WeFix>
+    <Partners></Partners>
     <Faq></Faq>
-    {/* <Footer></Footer> */}
   
    </main>
   );
