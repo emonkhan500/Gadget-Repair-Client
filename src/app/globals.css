@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+.partner-swiper .swiper-pagination {
+    margin-top: 25px;
+    position: relative;
+    bottom: -20px;
+  }

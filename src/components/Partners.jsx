@@ -7,10 +7,10 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination ,Autoplay} from "swiper/modules";
 const Partners = () => {
     return (
-        <div>
+        <div className='mt-16  lg:pl-20'>
             <Swiper
         slidesPerView={6}
         spaceBetween={5}
@@ -18,22 +18,26 @@ const Partners = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[FreeMode, Pagination]}
-        className="mySwiper w-full  mx-auto px-4 md:px-16 lg:px-10 2xl:px-28"
+        autoplay={{         // ✅ Added autoplay config
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
+        modules={[FreeMode, Pagination,Autoplay]}
+        className="partner-swiper mySwiper w-full  mx-auto px-4 md:px-16 lg:px-10 2xl:px-28"
         breakpoints={{
-          320: { slidesPerView: 2, spaceBetween: 0 }, // Mobile (sm)
-          550: { slidesPerView: 2, spaceBetween: 2 }, // Small tablets
-          640: { slidesPerView: 2, spaceBetween: 5 }, // Tablets
-          770: { slidesPerView: 4, spaceBetween: 8 }, // Small laptops
-          1024: { slidesPerView: 6, spaceBetween: 24 }, // Standard laptops (adjusted)
-          1280: { slidesPerView: 6, spaceBetween: 12 }, // Large laptops
-          1440: { slidesPerView: 6, spaceBetween: 15 }, // Widescreen monitors
+          320: { slidesPerView: 2, spaceBetween: 3 }, // Mobile (sm)
+          550: { slidesPerView: 3, spaceBetween: 3 }, // Small tablets
+          640: { slidesPerView: 3, spaceBetween: 3 }, // Tablets
+          770: { slidesPerView: 4, spaceBetween: 15 }, // Small laptops
+          1024: { slidesPerView: 4, spaceBetween: 3 }, // Standard laptops (adjusted)
+          1280: { slidesPerView: 6, spaceBetween: 3 }, // Large laptops
+          1440: { slidesPerView: 6, spaceBetween: 3 }, // Widescreen monitors
         }}
       >
         <SwiperSlide>
           
             <img
-              className=""
+              className="w-44 md:w-56"
               src="iphone.webp"
               alt="Cake & Milk"
             />
@@ -41,11 +45,12 @@ const Partners = () => {
           
         </SwiperSlide>
 
+        
         <SwiperSlide>
           
             <img
-              className=""
-              src="iphone.webp"
+              className="w-44 md:w-56"
+              src="lenevo.webp"
               alt="Cake & Milk"
             />
             
@@ -54,8 +59,8 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className=""
-              src="iphone.webp"
+              className="w-44 md:w-56"
+              src="hp.webp"
               alt="Cake & Milk"
             />
             
@@ -64,8 +69,8 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className=""
-              src="iphone.webp"
+              className="w-44 md:w-56"
+              src="sony.webp"
               alt="Cake & Milk"
             />
             
@@ -74,8 +79,8 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className=""
-              src="iphone.webp"
+              className="w-44 md:w-56"
+              src="p.webp"
               alt="Cake & Milk"
             />
             
@@ -84,8 +89,8 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className=""
-              src="iphone.webp"
+              className="w-44 md:w-56"
+              src="bose.webp"
               alt="Cake & Milk"
             />
             
@@ -94,8 +99,28 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className=""
-              src="iphone.webp"
+              className="w-44 md:w-56"
+              src="dell.webp"
+              alt="Cake & Milk"
+            />
+            
+          
+        </SwiperSlide>
+        <SwiperSlide>
+          
+            <img
+              className="w-44 md:w-56"
+              src="fuji.webp"
+              alt="Cake & Milk"
+            />
+            
+          
+        </SwiperSlide>
+        <SwiperSlide>
+          
+            <img
+              className="w-44 md:w-56"
+              src="asus.webp"
               alt="Cake & Milk"
             />
             

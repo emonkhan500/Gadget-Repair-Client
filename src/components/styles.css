@@ -44,12 +44,10 @@
     height: 100%;
     object-fit: cover;
   }
-  .swiper-pagination {
-    position: relative; 
-    margin-top: 10px; 
-  }
+  
   .swiper-wrapper {
     display: flex;
   }
   
 
+                                                       
