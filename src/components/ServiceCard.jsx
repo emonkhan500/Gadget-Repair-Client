@@ -21,8 +21,8 @@ const ServiceCard = () => {
             Apple, Samsung, Google, Huawei, Xiaomi, OnePlus, Oppo, Vivo, Sony, LG, Motorola, Nokia, Realme, Asus
           </p>
         </div>
-        <div className="mt-6">
-          <Link href='/service' className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</Link>
+        <div className="mt-6 ">
+          <Link href='/service' className="w-full block text-center px-4 py-2 rounded-full bg-white text-black">Read More</Link>
         </div>
       </div>
 
@@ -38,8 +38,8 @@ const ServiceCard = () => {
             Apple, Dell, HP, Lenovo, Asus, Acer, Microsoft, MSI, Razer, Samsung, LG, Huawei, Google, Alienware
           </p>
         </div>
-        <div className="mt-6">
-        <Link href='/service' className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</Link>
+        <div className="mt-6 ">
+        <Link href='/service' className="w-full block text-center px-4 py-2 rounded-full bg-white text-black">Read More</Link>
         </div>
       </div>
 
@@ -55,8 +55,8 @@ const ServiceCard = () => {
             Apple, Samsung, Microsoft, Lenovo, Huawei, Asus, Google, Acer, Dell, HP, Sony, Alcatel, LG
           </p>
         </div>
-        <div className="mt-6">
-        <Link href='/service' className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</Link>
+        <div className="mt-6 ">
+        <Link href='/service' className="w-full block text-center px-4 py-2 rounded-full bg-white text-black">Read More</Link>
         </div>
       </div>
 
@@ -72,8 +72,8 @@ const ServiceCard = () => {
             Operating System, Software Installation, Data Recovery, Virus and Malware Removal
           </p>
         </div>
-        <div className="mt-6">
-        <Link href='/service' className="w-full px-4 py-2 rounded-full bg-white text-black">Read More</Link>
+        <div className="mt-6 ">
+        <Link href='/service' className="w-full block text-center px-4 py-2 rounded-full bg-white text-black">Read More</Link>
         </div>
       </div>
     </div>
