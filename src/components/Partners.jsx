@@ -29,15 +29,15 @@ const Partners = () => {
           550: { slidesPerView: 3, spaceBetween: 3 }, // Small tablets
           640: { slidesPerView: 3, spaceBetween: 3 }, // Tablets
           770: { slidesPerView: 4, spaceBetween: 15 }, // Small laptops
-          1024: { slidesPerView: 4, spaceBetween: 3 }, // Standard laptops (adjusted)
-          1280: { slidesPerView: 6, spaceBetween: 3 }, // Large laptops
-          1440: { slidesPerView: 6, spaceBetween: 3 }, // Widescreen monitors
+          1024: { slidesPerView: 4, spaceBetween: 10 }, // Standard laptops (adjusted)
+          1280: { slidesPerView: 6, spaceBetween: 10 }, // Large laptops
+          1440: { slidesPerView: 6, spaceBetween: 10 }, // Widescreen monitors
         }}
       >
         <SwiperSlide>
           
             <img
-              className="w-44 md:w-56"
+              className="w-32 md:w-56 lg:w-40 xl:w-44 "
               src="iphone.webp"
               alt="Cake & Milk"
             />
@@ -49,7 +49,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-44 md:w-56"
+              className="w-32 md:w-44 lg:w-40 xl:w-44"
               src="lenevo.webp"
               alt="Cake & Milk"
             />
@@ -59,7 +59,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-44 md:w-56"
+              className="w-32 md:w-44 lg:w-40 xl:w-44"
               src="hp.webp"
               alt="Cake & Milk"
             />
@@ -69,7 +69,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-44 md:w-56"
+              className="w-32 md:w-44 lg:w-40 xl:w-44"
               src="sony.webp"
               alt="Cake & Milk"
             />
@@ -79,7 +79,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-44 md:w-56"
+              className="w-32 md:w-44 lg:w-40 xl:w-44"
               src="p.webp"
               alt="Cake & Milk"
             />
@@ -89,7 +89,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-44 md:w-56"
+              className="w-32 md:w-44 lg:w-40 xl:w-44"
               src="bose.webp"
               alt="Cake & Milk"
             />
@@ -99,7 +99,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-44 md:w-56"
+              className="w-32 md:w-44 lg:w-40 xl:w-44"
               src="dell.webp"
               alt="Cake & Milk"
             />
@@ -109,7 +109,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-44 md:w-56"
+              className="w-32 md:w-44 lg:w-40 xl:w-44"
               src="fuji.webp"
               alt="Cake & Milk"
             />
@@ -119,7 +119,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-44 md:w-56"
+              className="w-32 md:w-44 lg:w-40 xl:w-44"
               src="asus.webp"
               alt="Cake & Milk"
             />
