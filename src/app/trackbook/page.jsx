@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useDeleteBookingMutation, useGetBookingQuery } from "@/allApi/allApi";
 
 const page = () => {
-  const [bookings, setBooking] = useState([]);
+  
   const session = useSession();
   const email = session?.data?.user?.email;
 
@@ -36,7 +36,9 @@ const page = () => {
   };
 
   return (
+    
     <div>
+      
       <ToastContainer />
       <div className="relative pt-10 px-2  lg:px-36">
         <div
@@ -55,61 +57,71 @@ const page = () => {
           ></ShareHead>
 
           <div className="pb-16 overflow-x-auto md:mt-20">
-            <table className="table border-2 border-slate-200 p-3 ">
-              {/* head */}
-              <thead className="text-2xl text-white bg-[#C6E76C]">
-                <tr className="text-black">
-                  <th>SL</th>
-                  <th>GADGET</th>
-                  <th>MODEL</th>
-                  <th>YOUR PROBLEM</th>
-                  <th>DATE</th>
-                  <th>NAME</th>
-                  <th>PHONE</th>
-                  <th>UPDATE</th>
-                  <th>DELETE</th>
-                </tr>
-              </thead>
-              <tbody className="bg-gray-500">
-                {/* row 1 */}
-
-                {data?.myBookings.map((book, index) => (
-                  <tr
-                    key={book._id || index}
-                    className="border-b-2 border-slate-100"
-                  >
-                    {/* Serial Number */}
-                    <td className="text-lg font-bold">{index + 1}</td>
-
-                    {/* Dynamic Data */}
-                    <td className="text-lg font-bold">{book?.gadget}</td>
-                    <td className="text-lg font-bold">{book?.model}</td>
-                    <td className="text-lg font-medium">{book?.problem}</td>
-                    <td className="text-lg font-bold">{book?.date}</td>
-                    <td className="text-lg font-bold">{book?.name}</td>
-                    <td className="text-lg font-bold">{book?.phone}</td>
-
-                    {/* Buttons */}
-                    <td>
-                      <Link
-                        href={`/trackbook/update/${book._id}`}
-                        className="btn text-[#C6E76C] btn-ghost btn-xl"
-                      >
-                        <MdOutlineSecurityUpdate />
-                      </Link>
-                    </td>
-                    <td>
-                      <button
-                        onClick={() => handleDelete(book._id)}
-                        className="btn text-[#C6E76C] btn-ghost btn-lg"
-                      >
-                        <FaRegTrashAlt />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          {
+                isLoading ? 
+                  <div className="text-center mt-10">
+                    <span className="text-center loading loading-spinner loading-xl"></span>
+                  </div> :
+                  <table className="table border-2 border-slate-200 p-3 ">
+                  {/* head */}
+                  <thead className="text-2xl text-white bg-[#C6E76C]">
+                    <tr className="text-black">
+                      <th>SL</th>
+                      <th>GADGET</th>
+                      <th>MODEL</th>
+                      <th>YOUR PROBLEM</th>
+                      <th>DATE</th>
+                      <th>NAME</th>
+                      <th>PHONE</th>
+                      <th>UPDATE</th>
+                      <th>DELETE</th>
+                    </tr>
+                  </thead>
+                 
+                 
+                      <tbody className="bg-gray-500">
+                      {/* row 1 */}
+      
+                      {data?.myBookings.map((book, index) => (
+                        <tr
+                          key={book._id || index}
+                          className="border-b-2 border-slate-100"
+                        >
+                          {/* Serial Number */}
+                          <td className="text-lg font-bold">{index + 1}</td>
+      
+                          {/* Dynamic Data */}
+                          <td className="text-lg font-bold">{book?.gadget}</td>
+                          <td className="text-lg font-bold">{book?.model}</td>
+                          <td className="text-lg font-medium">{book?.problem}</td>
+                          <td className="text-lg font-bold">{book?.date}</td>
+                          <td className="text-lg font-bold">{book?.name}</td>
+                          <td className="text-lg font-bold">{book?.phone}</td>
+      
+                          {/* Buttons */}
+                          <td>
+                            <Link
+                              href={`/trackbook/update/${book._id}`}
+                              className="btn text-[#C6E76C] btn-ghost btn-xl"
+                            >
+                              <MdOutlineSecurityUpdate />
+                            </Link>
+                          </td>
+                          <td>
+                            <button
+                              onClick={() => handleDelete(book._id)}
+                              className="btn text-[#C6E76C] btn-ghost btn-lg"
+                            >
+                              <FaRegTrashAlt />
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                    
+                  
+                </table>}
+            
           </div>
         </div>
       </div>
