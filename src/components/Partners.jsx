@@ -12,50 +12,94 @@ const Partners = () => {
     return (
         <div>
             <Swiper
-        slidesPerView={10}
-        spaceBetween={1}
+        slidesPerView={6}
+        spaceBetween={5}
         freeMode={true}
         pagination={{
           clickable: true,
         }}
         modules={[FreeMode, Pagination]}
-        className="mySwiper w-full lg:w-[1586px] mx-auto lg:pl-7"
+        className="mySwiper w-full  mx-auto px-4 md:px-16 lg:px-10 2xl:px-28"
         breakpoints={{
           320: { slidesPerView: 2, spaceBetween: 0 }, // Mobile (sm)
-          550: { slidesPerView: 4, spaceBetween: 2 }, // Small tablets
-          640: { slidesPerView: 5, spaceBetween: 3 }, // Tablets
-          770: { slidesPerView: 6, spaceBetween: 5 }, // Small laptops
-          1024: { slidesPerView: 7, spaceBetween: 24 }, // Standard laptops (adjusted)
-          1280: { slidesPerView: 10, spaceBetween: 12 }, // Large laptops
-          1440: { slidesPerView: 11, spaceBetween: 15 }, // Widescreen monitors
+          550: { slidesPerView: 2, spaceBetween: 2 }, // Small tablets
+          640: { slidesPerView: 2, spaceBetween: 5 }, // Tablets
+          770: { slidesPerView: 4, spaceBetween: 8 }, // Small laptops
+          1024: { slidesPerView: 6, spaceBetween: 24 }, // Standard laptops (adjusted)
+          1280: { slidesPerView: 6, spaceBetween: 12 }, // Large laptops
+          1440: { slidesPerView: 6, spaceBetween: 15 }, // Widescreen monitors
         }}
       >
         <SwiperSlide>
-          <div className="w-40 h-56 lg:py-3 bg-[#F2FCE4] flex flex-col items-center rounded-lg ">
+          
             <img
-              className="w-24 h-24 object-contain"
-              src="https://i.ibb.co/QvGkSQvq/Link-cat-13-png.png"
+              className=""
+              src="iphone.webp"
               alt="Cake & Milk"
             />
-            <h1 className="text-base text-[#253D4E] font-semibold px-4">
-              Cake & Milk
-            </h1>
-            <h1 className="text-[#7E7E7E]">26 items</h1>
-          </div>
+            
+          
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="w-40 h-56 lg:py-3 bg-[#FFF3FF] flex flex-col items-center rounded-lg ">
+          
             <img
-              className="w-24 h-24 object-contain"
-              src="https://i.ibb.co/XxNXLFTs/Link-cat-2-png.png"
-              alt="Vegetables"
+              className=""
+              src="iphone.webp"
+              alt="Cake & Milk"
             />
-            <h1 className="text-base text-[#253D4E] font-semibold px-4">
-              Vegetables
-            </h1>
-            <h1 className="text-[#7E7E7E]">26 items</h1>
-          </div>
+            
+          
+        </SwiperSlide>
+        <SwiperSlide>
+          
+            <img
+              className=""
+              src="iphone.webp"
+              alt="Cake & Milk"
+            />
+            
+          
+        </SwiperSlide>
+        <SwiperSlide>
+          
+            <img
+              className=""
+              src="iphone.webp"
+              alt="Cake & Milk"
+            />
+            
+          
+        </SwiperSlide>
+        <SwiperSlide>
+          
+            <img
+              className=""
+              src="iphone.webp"
+              alt="Cake & Milk"
+            />
+            
+          
+        </SwiperSlide>
+        <SwiperSlide>
+          
+            <img
+              className=""
+              src="iphone.webp"
+              alt="Cake & Milk"
+            />
+            
+          
+        </SwiperSlide>
+        <SwiperSlide>
+          
+            <img
+              className=""
+              src="iphone.webp"
+              alt="Cake & Milk"
+            />
+            
+          
         </SwiperSlide>
 
         
