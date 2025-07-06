@@ -69,7 +69,7 @@ const Nav = () => {
         <div className="flex justify-around items-center" >
            {/* Small menu */}
         <button
-          className="md:hidden text-3xl text-[#4d6c77]"
+          className="md:hidden text-3xl text-[#C6E76C]"
           onClick={toggleMenu}
         >
           {isOpen ? <MdClose /> : <MdMenu />}
