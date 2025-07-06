@@ -1,7 +1,7 @@
 'use client';
 
 import { MdClose, MdMenu } from "react-icons/md";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { signOut,useSession } from "next-auth/react";
@@ -14,9 +14,10 @@ const Nav = () => {
     
   const router = useRouter()
   const session =useSession()
-  console.log(session);
+
     const [isScrolled, setIsScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef(null);
     const toggleMenu = () => {
       setIsOpen(!isOpen);
     };
@@ -31,7 +32,28 @@ const Nav = () => {
     }, []);
     const pathName=usePathname()
 
+  // ✅ Close on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathName]);
+  
 
+  // ✅ Close on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
     
     const links=[
       {
@@ -113,7 +135,7 @@ const Nav = () => {
           >
             <ul className="gap-[20px] text-[1rem] flex flex-col mt-3">
             {
-    links.map((link,index)=><li key={index}><Link href={link.path}>{link.title}</Link> </li>)
+    links.map((link,index)=><li key={index}><Link className={`${pathName === link.path && 'text-[#C6E76C]'}`} href={link.path}>{link.title}</Link></li>)
    }
             </ul>
           </aside>
