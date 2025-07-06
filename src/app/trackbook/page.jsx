@@ -70,7 +70,7 @@ const page = () => {
                       <th>GADGET</th>
                       <th>MODEL</th>
                       <th>YOUR PROBLEM</th>
-                      <th>DATE</th>
+                      <th>EXPECTED DATE</th>
                       <th>NAME</th>
                       <th>PHONE</th>
                       <th>UPDATE</th>

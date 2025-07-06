@@ -134,7 +134,7 @@ const page = () => {
                 />
               </div>
               <div>
-                  <label className="block mb-1 font-medium">Delivery Date</label>
+                  <label className="block mb-1 font-medium">Expected Delivery</label>
                   <input
                  
                     type='date'
