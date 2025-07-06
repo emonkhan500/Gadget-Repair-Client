@@ -12,7 +12,7 @@ const page = () => {
   const { data } = useSession();
   const [createBooking, { isLoading: isCreating }] = useCreateBookingMutation();
 
-  const handleSubmit =async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const bookingData = {
@@ -36,7 +36,7 @@ const page = () => {
   };
   return (
     <div>
-      <ToastContainer/>
+      <ToastContainer />
       <div className="relative px-4 md:px-16 lg:px-36">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -134,14 +134,16 @@ const page = () => {
                 />
               </div>
               <div>
-                  <label className="block mb-1 font-medium">Expected Delivery</label>
-                  <input
-                 
-                    type='date'
-                    name="date"
-                    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-                  />
-                </div>
+                <label className="block mb-1 font-medium">
+                  Expected Delivery
+                </label>
+                <input
+                  type="date"
+                  name="date"
+                  min={new Date().toISOString().split("T")[0]} // This blocks past dates
+                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+                />
+              </div>
             </div>
 
             {/* Problem */}
@@ -161,7 +163,7 @@ const page = () => {
             {/* Name, Email, Phone */}
             <div className="grid md:grid-cols-3 gap-4">
               <input
-              readOnly
+                readOnly
                 defaultValue={data?.user?.name}
                 type="text"
                 name="name"
@@ -169,7 +171,7 @@ const page = () => {
                 className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
               />
               <input
-              readOnly
+                readOnly
                 defaultValue={data?.user?.email}
                 type="email"
                 name="email"
@@ -177,18 +179,16 @@ const page = () => {
                 className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
               />
               <input
-  type="text"
-  name="phone"
-  placeholder="Phone"
-  inputMode="numeric"
-  pattern="[0-9]*"
-  onInput={(e) => {
-    e.target.value = e.target.value.replace(/[^0-9]/g, '');
-  }}
-  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-/>
-
-
+                type="text"
+                name="phone"
+                placeholder="Phone"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                onInput={(e) => {
+                  e.target.value = e.target.value.replace(/[^0-9]/g, "");
+                }}
+                className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+              />
             </div>
 
             {/* Submit Button */}
