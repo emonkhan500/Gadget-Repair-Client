@@ -7,7 +7,7 @@ const Banner = () => {
       <div className="flex flex-col md:flex-row gap-8 md:gap-3 lg:gap-16 2xl:gap-32 relative">
         <div className="w-full md:w-1/2 ">
           <img
-            className="md:h-[600px] xl:h-[650px] 2xl:h-[750px] w-full rounded-ee-4xl"
+            className="md:h-[600px] xl:h-[650px] 2xl:h-[750px]  w-full rounded-ee-4xl "
             src="banner-11.webp"
             alt=""
           />

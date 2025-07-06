@@ -14,14 +14,14 @@ const page = () => {
       <div className="relative  w-full">
   {/* Background image */}
   <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{
-      backgroundImage:
-        "url('https://reactheme.com/products/wordpress/gadgetfix/wp-content/uploads/2024/12/1-1.webp')",
-       // Controls the background opacity
-    }}
-  ></div>
-  <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://reactheme.com/products/wordpress/gadgetfix/wp-content/uploads/2024/12/1-1.webp')",
+            // Controls the background opacity
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
 
 
   {/* Content goes here */}
