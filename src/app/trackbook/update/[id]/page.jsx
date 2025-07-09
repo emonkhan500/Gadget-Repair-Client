@@ -18,7 +18,7 @@ const page = () => {
       }
     }, [data, isLoading]);
 
-  
+console.log(data)
   
 
   const handleUpdateBooking = async (event) => {
@@ -123,7 +123,7 @@ const page = () => {
               <div className="grid md:grid-cols-3 gap-4">
                 <input
                 readOnly
-                  defaultValue={data?.user?.name}
+                  defaultValue={booking?.name}
                   type="text"
                   name="name"
                   placeholder="Name"
@@ -131,7 +131,7 @@ const page = () => {
                 />
                 <input
                 readOnly
-                  defaultValue={data?.user?.email}
+                  defaultValue={booking?.email}
                   type="email"
                   name="email"
                   placeholder="Email Address"
