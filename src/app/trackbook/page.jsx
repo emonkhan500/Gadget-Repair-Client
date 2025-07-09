@@ -5,6 +5,8 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineSecurityUpdate } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
+import Swal from "sweetalert2";
+
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useDeleteBookingMutation, useGetBookingQuery } from "@/allApi/allApi";
@@ -21,19 +23,41 @@ const page = () => {
   const [deleteBooking] = useDeleteBookingMutation();
 
   // delete
-  const handleDelete = async (id) => {
-    try {
-      const response = await deleteBooking(id).unwrap();
-      if (response?.response?.deletedCount > 0) {
-        toast.success(response?.message);
-        refetch() 
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          const response = await deleteBooking(id).unwrap();
+  
+          if (response?.response?.deletedCount > 0) {
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your booking has been deleted.",
+              icon: "success",
+              timer: 1500,
+              showConfirmButton: false,
+            });
+            toast.success(response?.message);
+            refetch(); // RTK Query re-fetch
+          } else {
+            toast.error("Deletion failed.");
+          }
+        } catch (error) {
+          console.error(error);
+          toast.error("Failed to delete booking.");
+        }
       }
-    } catch (err) {
-      console.error(err);
-      toast.error("Failed to delete booking.");
-    }
-    
+    });
   };
+  
 
   return (
     
