@@ -6,6 +6,7 @@ import { SiVlcmediaplayer } from "react-icons/si";
 import { IoWatchOutline } from "react-icons/io5";
 import { IoGameControllerOutline } from "react-icons/io5";
 import Letter from '@/components/serviceCompo/Letter';
+import Link from 'next/link';
 
 
 
@@ -43,9 +44,7 @@ const page = () => {
             Apple, Samsung, Google, Huawei, Xiaomi, OnePlus, Oppo, Vivo, Sony, LG, Motorola, Nokia, Realme, Asus
           </p>
         </div>
-        <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
-        </div>
+        <Link href='/bookrepair' className="mt-6 text-center w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</Link>
       </div>
 
       {/* Card 2 */}
@@ -60,9 +59,7 @@ const page = () => {
             Apple, Dell, HP, Lenovo, Asus, Acer, Microsoft, MSI, Razer, Samsung, LG, Huawei, Google, Alienware
           </p>
         </div>
-        <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
-        </div>
+        <Link href='/bookrepair' className="mt-6 text-center w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</Link>
       </div>
       {/* img 1 */}
       <div>
@@ -81,9 +78,7 @@ const page = () => {
             Apple, Samsung, Microsoft, Lenovo, Huawei, Asus, Google, Acer, Dell, HP, Sony, Alcatel, LG
           </p>
         </div>
-        <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
-        </div>
+        <Link href='/bookrepair' className="mt-6 text-center w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</Link>
       </div>
 
       {/* Card 4 */}
@@ -98,9 +93,9 @@ const page = () => {
             Operating System, Software Installation, Data Recovery, Virus and Malware Removal
           </p>
         </div>
-        <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
-        </div>
+        
+          <Link href='/bookrepair' className="mt-6 text-center w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</Link>
+        
       </div>
       {/* img 2 */}
       <div>
@@ -118,9 +113,7 @@ const page = () => {
           Apple, Dell, HP, Lenovo, Asus, Acer, Microsoft, MSI, Razer, Samsung, LG, Toshiba, Huawei, Google, Alienware
           </p>
         </div>
-        <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
-        </div>
+        <Link href='/bookrepair' className="mt-6 text-center w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</Link>
       </div>
       {/* Card 6 */}
       <div className="bg-[#19272b]  flex flex-col justify-between p-4">
@@ -134,9 +127,7 @@ const page = () => {
           Apple, Dell, HP, Lenovo, Asus, Acer, Microsoft, MSI, Razer, Samsung, LG, Toshiba, Huawei, Google, Alienware
           </p>
         </div>
-        <div className="mt-6">
-          <button className="w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</button>
-        </div>
+        <Link href='/bookrepair' className="mt-6 text-center w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</Link>
       </div>
     </div>
     <Letter></Letter>

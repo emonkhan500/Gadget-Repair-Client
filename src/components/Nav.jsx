@@ -66,9 +66,9 @@ const Nav = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-6' : 'bg-transparent py-6 '}`}>
       <div className="flex justify-around items-center">
         
-        {/* ✅ Wrap toggle + menu in one ref */}
+    
         <div ref={menuWrapperRef} className="relative">
-          {/* Small menu toggle button */}
+     
           <button
             className="md:hidden text-3xl text-[#C6E76C]"
             onClick={toggleMenu}
@@ -100,7 +100,7 @@ const Nav = () => {
         </div>
 
         {/* Logo */}
-        <div className="w-20 md:w-[140px] lg:w-[180px] xl:w-[200px]">
+        <div className="xl:-ml-60 w-20 md:w-[140px] lg:w-[180px] xl:w-[200px]">
           <Link href='/'><img src="/logo.webp" alt="logo" /></Link>
         </div>
 

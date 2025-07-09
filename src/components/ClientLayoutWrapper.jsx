@@ -18,11 +18,11 @@ export default function ClientLayoutWrapper({ children }) {
 
   if (isLoading) {
     return (
-      <div className=" h-screen flex items-center justify-center">
+      <div className="dark:bg-white h-screen flex items-center justify-center">
         <img
           data-aos="zoom-in"
           data-aos-duration="1500"
-          className="w-48 h-48"
+          className="w-48 h-28"
           src="logo.webp"
           alt="Splash Logo"
         />
