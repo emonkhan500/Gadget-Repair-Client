@@ -4,7 +4,7 @@ import { IoMdCheckmark } from "react-icons/io";
 const Banner = () => {
   return (
     <div className=" mt-16 md:mt-5">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-3 lg:gap-16 2xl:gap-32 relative">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-3 lg:gap-16 2xl:gap-28 relative">
         <div className="w-full md:w-1/2 ">
           <img
             className="md:h-[600px] xl:h-[650px] 2xl:h-[750px]  w-full rounded-ee-4xl "
@@ -12,7 +12,7 @@ const Banner = () => {
             alt=""
           />
         </div>
-        <div className="hidden lg:flex  absolute h-40 xl:h-44 w-40 xl:w-44 top-60 lg:left-100 xl:left-150 2xl:left-203">
+        <div className="hidden lg:flex  absolute h-40 xl:h-44 w-40 xl:w-44 top-60 lg:left-100 xl:left-150 2xl:left-185">
             <img src="scratch.webp" alt="" />
         </div>
         <div className="w-full md:w-1/2 xl:pr-32 2xl:pr-64 space-y-3 lg:space-y-8 px-4">
