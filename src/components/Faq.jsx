@@ -9,16 +9,16 @@ const Faq = () => {
         <div data-aos="fade-down" data-aos-duration="3000" >
         <div className="flex items-center  gap-3  md:pl-5 ">
             <div className="w-10 h-[2px] bg-gray-400"></div>
-            <span className=" tracking-widest font-semibold text-gray-700">
+            <span className=" tracking-widest font-semibold text-gray-700 dark:text-white">
             QUESTIONS
             </span>
           </div>
-          <h1 className= 'text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold md:mt-2 text-gray-700 mb-5 md:mb-8 lg:mb-5 md:pl-5 '>Frequently asked questions</h1>
+          <h1 className= 'dark:text-white text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold md:mt-2 text-gray-700 mb-5 md:mb-8 lg:mb-5 md:pl-5 '>Frequently asked questions</h1>
         </div>
           <div className="join join-vertical w-full">
             <div className="collapse collapse-arrow join-item border-base-300 border-b-2">
               <input type="radio" name="my-accordion-4" defaultChecked/>
-              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-orange">
+              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-[#4d6c77]">
               What types of gadgets do you service?
               </div>
               <div className="collapse-content text-gray-500 dark:text-white">
@@ -29,7 +29,7 @@ const Faq = () => {
             </div>
             <div className="collapse collapse-arrow join-item border-base-300 border-b-2">
               <input type="radio" name="my-accordion-4" />
-              <div className="collapse-title text-xl font-medium  dark:text-orange">
+              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-[#4d6c77]">
               What brands do you repair?
               </div>
               <div className="collapse-content text-gray-500 dark:text-white">
@@ -40,7 +40,7 @@ const Faq = () => {
             </div>
             <div className="collapse collapse-arrow join-item border-base-300 border-b-2">
               <input type="radio" name="my-accordion-4" />
-              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-orange">
+              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-[#4d6c77]">
               Do you offer a warranty on your repairs?
               </div>
               <div className="collapse-content text-gray-500 dark:text-white">
@@ -51,7 +51,7 @@ const Faq = () => {
             </div>
             <div className="collapse collapse-arrow join-item border-base-300 border-b-2">
               <input type="radio" name="my-accordion-4" />
-              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-orange">
+              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-[#4d6c77]">
               How do I get my gadget repaired?
               </div>
               <div className="collapse-content text-gray-500 dark:text-white">
@@ -62,7 +62,7 @@ const Faq = () => {
             </div>
             <div className="collapse collapse-arrow join-item border-base-300 border-b-2">
               <input type="radio" name="my-accordion-4" />
-              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-orange">
+              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-[#4d6c77]">
               Do I need to back up my data before repair?
               </div>
               <div className="collapse-content text-gray-500 dark:text-white">
@@ -73,7 +73,7 @@ const Faq = () => {
             </div>
             <div className="collapse collapse-arrow join-item border-base-300 border-b-2">
               <input type="radio" name="my-accordion-4" />
-              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-orange">
+              <div className="collapse-title text-xl font-medium text-gray-800 dark:text-[#4d6c77]">
               How long will the repair take?
               </div>
               <div className="collapse-content text-gray-500 dark:text-white">

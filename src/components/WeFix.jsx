@@ -13,14 +13,14 @@ const WeFix = () => {
   console.log(data?.services);
   return (
     <div>
-      <div data-aos="fade-down" data-aos-duration="2000" className="text-center">
+      <div data-aos="fade-down" data-aos-duration="2000" className=" text-center">
         <div className="flex items-center  gap-3 mt-12 md:mt-20 lg:mt-28 justify-center ">
           <div className="w-10 h-[2px] bg-gray-400"></div>
-          <span className=" tracking-widest font-semibold text-gray-700">
+          <span className="dark:text-white tracking-widest font-semibold text-gray-700">
             ISSUES WE REPAIR
           </span>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold mt-4 text-gray-700">
+        <h1 className="text-4xl md:text-5xl font-bold mt-4 text-gray-700 dark:text-white">
           What Do We Fix
         </h1>
       </div>
