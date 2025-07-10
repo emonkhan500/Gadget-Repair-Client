@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { signOut, useSession } from "next-auth/react";
+import 'animate.css';
 
 const Nav = () => {
   const router = useRouter();
@@ -63,7 +64,7 @@ const Nav = () => {
   const handleSignUp = () => router.push('/signup');
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-6' : 'bg-transparent py-6 '}`}>
+    <nav className={`animate__animated animate__wobble animate__fast fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-6' : 'bg-transparent py-6 '}`}>
       <div className="flex justify-around items-center">
         
     
