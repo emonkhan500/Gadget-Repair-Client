@@ -7,7 +7,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { signOut, useSession } from "next-auth/react";
 import 'animate.css';
 
-const Nav = () => {
+const    Nav = () => {
   const router = useRouter();
   const session = useSession();
 
@@ -64,7 +64,7 @@ const Nav = () => {
   const handleSignUp = () => router.push('/signup');
 
   return (
-    <nav className={`animate__animated animate__wobble animate__fast fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-6' : 'bg-transparent py-6 '}`}>
+    <nav className={`animate__animated animate__wobble animate__fast fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white dark:bg-[#1E2229]  shadow-md py-6' : 'bg-transparent py-6 '}`}>
       <div className="flex justify-around items-center">
         
     
@@ -101,7 +101,7 @@ const Nav = () => {
         </div>
 
         {/* Logo */}
-        <div className="xl:-ml-60 w-20 md:w-[140px] lg:w-[180px] xl:w-[200px]">
+        <div className="dark:bg-white  xl:-ml-60 w-20 md:w-[140px] lg:w-[180px] xl:w-[200px]">
           <Link href='/'><img src="/logo.webp" alt="logo" /></Link>
         </div>
 
