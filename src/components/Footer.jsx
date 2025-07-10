@@ -9,6 +9,10 @@ import { IoMdTime, IoMdPin, IoMdMail } from "react-icons/io";
 import Link from "next/link";
 
 const Footer = () => {
+  const iconStyle = {
+   
+    animation: "smallBounce 0.5s infinite alternate",
+  };
     return (
         <footer className="bg-[#1f3337] text-gray-300 py-10 px-4 z-10">
         <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -22,11 +26,11 @@ const Footer = () => {
               to provide reliable repairs for all your electronic devices.
             </p>
             {/* Social icons */}
-            <div className="flex gap-[15px] text-black mt-3 ">
-        <a href='https://www.facebook.com/profile.php?id=100025282659899' className="text-[1.3rem] p-1.5 cursor-pointer rounded-full bg-white text-[#424242] shadow-md">
+            <div  className="flex gap-[15px] text-black mt-3 ">
+        <a  href='https://www.facebook.com/profile.php?id=100025282659899'  className="text-[1.3rem] p-1.5 cursor-pointer rounded-full bg-white text-[#424242] shadow-md">
             <CgFacebook/>
         </a>
-        <a href='ttps://github.com/emonkhan500' className="text-[1.2rem] p-1.5 cursor-pointer rounded-full bg-white text-[#424242] shadow-md">
+        <a href='https://github.com/emonkhan500' className="text-[1.2rem] p-1.5 cursor-pointer rounded-full bg-white text-[#424242] shadow-md">
         <FaGithub />
         </a>
         <a href='https://emon-khan-portfolio.netlify.app/' className="text-[1.2rem] p-1.5 cursor-pointer rounded-full bg-white text-[#424242] shadow-md">

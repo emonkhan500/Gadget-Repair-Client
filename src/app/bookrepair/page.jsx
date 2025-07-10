@@ -108,10 +108,10 @@ const page = () => {
       </div>
       <div className="max-w-7xl mx-auto px-4 py-12 grid lg:grid-cols-3 gap-10 z-10">
         {/* Form Section */}
-        <div className="lg:col-span-2">
+        <div   className="lg:col-span-2">
           <form className="space-y-6" onSubmit={handleSubmit}>
             {/* Gadget & Model */}  
-            <div className="grid md:grid-cols-3 gap-4">
+            <div data-aos="flip-left" data-aos-duration="2000" className="grid md:grid-cols-3 gap-4">
               <div>
                 <label className="block mb-1 font-medium">Choose Gadget</label>
                 <select
@@ -166,7 +166,7 @@ const page = () => {
             </div>
 
             {/* Name, Email, Phone */}
-            <div className="grid md:grid-cols-3 gap-4">
+            <div data-aos="flip-right" data-aos-duration="2000" className="grid md:grid-cols-3 gap-4">
               <input
                 readOnly
                 defaultValue={data?.user?.name}
@@ -198,6 +198,7 @@ const page = () => {
 
             {/* Submit Button */}
             <button
+            data-aos="fade-down" data-aos-duration="2500"
               type="submit"
               disabled={isCreating}
               className="w-full  bg-gray-700 text-white px-6 py-2 rounded-full hover:bg-gray-800"
@@ -208,9 +209,9 @@ const page = () => {
         </div>
 
         {/* Sidebar Info */}
-        <div className="space-y-6">
+        <div  className="space-y-6">
           {/* Location Card */}
-          <div className="bg-[#c6e76c] p-6 rounded-lg space-y-2">
+          <div  data-aos="fade-up" data-aos-duration="1500" className="bg-[#c6e76c] p-6 rounded-lg space-y-2">
             <div className="flex items-center gap-3">
               <span className="text-3xl">
                 <CiLocationOn />
@@ -223,7 +224,7 @@ const page = () => {
           </div>
 
           {/* Opening Hours Card */}
-          <div className="bg-[#223035] text-white p-6 rounded-lg">
+          <div  data-aos="fade-up" data-aos-duration="2000" className="bg-[#223035] text-white p-6 rounded-lg">
             <div className="flex items-center gap-3">
               <span className="text-3xl">
                 <LuAlarmClock />
