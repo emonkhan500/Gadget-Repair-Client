@@ -33,7 +33,7 @@ const page = () => {
    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mt-10 md:mt-10  ">
       
       {/* Card 1 */}
-      <div className="bg-[#19272b]  flex flex-col justify-between p-4">
+      <div data-aos="zoom-in-up" data-aos-duration="2500" className="bg-[#19272b]  flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
             <IoIosPhonePortrait className="text-7xl text-[#C6E76C]" />
@@ -48,7 +48,7 @@ const page = () => {
       </div>
 
       {/* Card 2 */}
-      <div className="bg-[#223035]  flex flex-col justify-between p-4">
+      <div data-aos="zoom-in-up" data-aos-duration="2500" className="bg-[#223035]  flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
             <IoLaptopOutline className="text-7xl text-[#C6E76C]" />
@@ -62,12 +62,12 @@ const page = () => {
         <Link href='/bookrepair' className="mt-6 text-center w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</Link>
       </div>
       {/* img 1 */}
-      <div>
+      <div data-aos="zoom-in-up" data-aos-duration="2500">
         <img src="bg.webp" alt="" />
       </div>
 
       {/* Card 3 */}
-      <div className="bg-[#19272b]  flex flex-col justify-between p-4">
+      <div data-aos="zoom-in-up" data-aos-duration="2500" className="bg-[#19272b]  flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
             <BsTabletLandscape className="text-7xl text-[#C6E76C]" />
@@ -82,7 +82,7 @@ const page = () => {
       </div>
 
       {/* Card 4 */}
-      <div className="bg-[#19272b]  flex flex-col justify-between p-4">
+      <div data-aos="zoom-in-down" data-aos-duration="2500" className="bg-[#19272b]  flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
             <SiVlcmediaplayer className="text-7xl text-[#C6E76C]" />
@@ -98,11 +98,11 @@ const page = () => {
         
       </div>
       {/* img 2 */}
-      <div>
+      <div data-aos="zoom-in-down" data-aos-duration="2500">
         <img className='h-full' src="faq.webp" alt="" />
       </div>
       {/* Card 5 */}
-      <div className="bg-[#223035]  flex flex-col justify-between p-4">
+      <div data-aos="zoom-in-down" data-aos-duration="2500" className="bg-[#223035]  flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
           <IoWatchOutline  className="text-7xl text-[#C6E76C]" />
@@ -116,7 +116,7 @@ const page = () => {
         <Link href='/bookrepair' className="mt-6 text-center w-full px-4 py-2 rounded-full bg-[#C6E76C] text-black">Book Now</Link>
       </div>
       {/* Card 6 */}
-      <div className="bg-[#19272b]  flex flex-col justify-between p-4">
+      <div data-aos="zoom-in-down" data-aos-duration="2500" className="bg-[#19272b]  flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
           <IoGameControllerOutline   className="text-7xl text-[#C6E76C]" />
