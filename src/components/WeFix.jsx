@@ -24,7 +24,7 @@ const WeFix = () => {
           What Do We Fix
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7 lg:gap-10  2xl:gap-16 mt-5 md:mt-10 px-4 md:px-16 lg:px-10 2xl:px-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7 lg:gap-10  2xl:gap-10 mt-5 md:mt-10 px-4 md:px-16 lg:px-10 2xl:px-28">
 
       {serviceData?.map((service, index) => (
   <div key={index}>
