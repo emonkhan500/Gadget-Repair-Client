@@ -3,12 +3,17 @@ import { useCreateBookingMutation } from "@/allApi/allApi";
 
 import ShareHead from "@/components/ShareHead/ShareHead";
 import { useSession } from "next-auth/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { LuAlarmClock } from "react-icons/lu";
 import { ToastContainer, toast } from "react-toastify";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const page = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const { data } = useSession();
   const [createBooking, { isLoading: isCreating }] = useCreateBookingMutation();
 
@@ -54,7 +59,7 @@ const page = () => {
           ></ShareHead>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 p-6 pt-10 pb-36">
-            <div className="text-center space-y-2 border-x px-4">
+            <div data-aos="fade-left" data-aos-duration="2000" className="text-center space-y-2 border-x px-4">
               <button className=" text-black rounded-lg  bg-[#C6E76C] px-5 py-1">
                 STEP 1
               </button>
@@ -63,7 +68,7 @@ const page = () => {
               </h3>
             </div>
 
-            <div className="text-center space-y-2 border-x md:border-r  px-4">
+            <div data-aos="fade-left" data-aos-duration="2500" className="text-center space-y-2 border-x md:border-r  px-4">
               <button className="text-black rounded-lg  bg-[#C6E76C] px-5 py-1">
                 STEP 2
               </button>
@@ -81,7 +86,7 @@ const page = () => {
               </h3>
             </div>
 
-            <div className="text-center space-y-2 border-x md:border-r px-4">
+            <div data-aos="fade-right" data-aos-duration="2500"  className="text-center space-y-2 border-x md:border-r px-4">
               <button className="text-black rounded-lg  bg-[#C6E76C] px-5 py-1">
                 Step 4
               </button>
@@ -90,7 +95,7 @@ const page = () => {
               </h3>
             </div>
 
-            <div className="text-center space-y-2 border-x md:border-r px-4">
+            <div data-aos="fade-right" data-aos-duration="2000" className="text-center space-y-2 border-x md:border-r px-4">
               <button className="text-black rounded-lg  bg-[#C6E76C] px-5 py-1">
                 Step 5
               </button>
@@ -105,7 +110,7 @@ const page = () => {
         {/* Form Section */}
         <div className="lg:col-span-2">
           <form className="space-y-6" onSubmit={handleSubmit}>
-            {/* Gadget & Model */}
+            {/* Gadget & Model */}  
             <div className="grid md:grid-cols-3 gap-4">
               <div>
                 <label className="block mb-1 font-medium">Choose Gadget</label>
@@ -195,7 +200,7 @@ const page = () => {
             <button
               type="submit"
               disabled={isCreating}
-              className="bg-gray-700 text-white px-6 py-2 rounded-full hover:bg-gray-800"
+              className="w-full  bg-gray-700 text-white px-6 py-2 rounded-full hover:bg-gray-800"
             >
               Book Now
             </button>
