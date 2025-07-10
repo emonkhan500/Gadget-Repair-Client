@@ -18,6 +18,7 @@ const page = () => {
 
   const { data, error, isLoading, refetch } = useGetBookingQuery(email, {
     skip: !email,
+    refetchOnMountOrArgChange: true,
   });
 
   const [deleteBooking] = useDeleteBookingMutation();
