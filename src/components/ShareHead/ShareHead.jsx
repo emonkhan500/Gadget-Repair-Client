@@ -1,11 +1,12 @@
 
 import React from 'react';
+import 'animate.css';
 import { IoIosArrowForward, IoMdHome } from 'react-icons/io';
 
 const ShareHead = ({upTitle, pageTitle}) => {
     return (
-        <div>
-            <div className="flex items-center  gap-3 mt-12 md:mt-20 lg:mt-28 justify-center text-lg text-white">
+        <div className='animate__animated  animate__fast animate__backInDown'>
+            <div className=" flex items-center  gap-3 mt-12 md:mt-20 lg:mt-28 justify-center text-lg text-white">
             <div className="w-10 h-[2px] bg-white"></div>
             <span className=" tracking-widest font-semibold text-white">
             {upTitle}

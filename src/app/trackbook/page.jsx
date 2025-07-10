@@ -10,8 +10,14 @@ import Swal from "sweetalert2";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useDeleteBookingMutation, useGetBookingQuery } from "@/allApi/allApi";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const page = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   
   const session = useSession();
   const email = session?.data?.user?.email;
@@ -93,7 +99,7 @@ const page = () => {
   ) : (
     <table className="table border-2 border-slate-200 p-3">
       {/* head */}
-      <thead className="text-2xl text-white bg-[#C6E76C]">
+      <thead data-aos="fade-down" data-aos-duration="1500" className="text-2xl text-white bg-[#C6E76C]">
         <tr className="text-black">
           <th>SL</th>
           <th>GADGET</th>
@@ -107,7 +113,7 @@ const page = () => {
         </tr>
       </thead>
 
-      <tbody className="bg-gray-500">
+      <tbody data-aos="fade-up" data-aos-duration="2500" className="bg-gray-500">
         {data?.myBookings.map((book, index) => (
           <tr key={book._id || index} className="border-b-2 border-slate-100">
             <td className="text-lg font-bold">{index + 1}</td>
