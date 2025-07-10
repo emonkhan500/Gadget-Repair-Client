@@ -5,7 +5,8 @@ const Faq = () => {
         <div className=' md:p-1 lg:p-7 xl:p-10 mt-16 w-full  mx-auto'>
             
       <div className="flex flex-col-reverse justify-center items-center lg:flex-row gap-6 lg:gap-7 xl:gap-10">
-        <div className="w-full lg:w-1/2 xl:pl-20 2xl:pl-36 px-2">
+        <div data-aos="fade-up-left" data-aos-duration="1000"  className="w-full lg:w-1/2 xl:pl-20 2xl:pl-36 px-2">
+        <div data-aos="fade-down" data-aos-duration="3000" >
         <div className="flex items-center  gap-3  md:pl-5 ">
             <div className="w-10 h-[2px] bg-gray-400"></div>
             <span className=" tracking-widest font-semibold text-gray-700">
@@ -13,6 +14,7 @@ const Faq = () => {
             </span>
           </div>
           <h1 className= 'text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold md:mt-2 text-gray-700 mb-5 md:mb-8 lg:mb-5 md:pl-5 '>Frequently asked questions</h1>
+        </div>
           <div className="join join-vertical w-full">
             <div className="collapse collapse-arrow join-item border-base-300 border-b-2">
               <input type="radio" name="my-accordion-4" defaultChecked/>
@@ -83,7 +85,7 @@ const Faq = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 ">
+        <div data-aos="fade-down-right" data-aos-duration="1000"  className="w-full lg:w-1/2 ">
           <div  className="flex ">
             
             <img className='h-[350px] md:h-[450px] lg:h-[620px] md:rounded-ss-4xl' src="faq.webp" alt="" />

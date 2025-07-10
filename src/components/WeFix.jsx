@@ -13,7 +13,7 @@ const WeFix = () => {
   console.log(data?.services);
   return (
     <div>
-      <div className="text-center">
+      <div data-aos="fade-down" data-aos-duration="2000" className="text-center">
         <div className="flex items-center  gap-3 mt-12 md:mt-20 lg:mt-28 justify-center ">
           <div className="w-10 h-[2px] bg-gray-400"></div>
           <span className=" tracking-widest font-semibold text-gray-700">
@@ -27,7 +27,7 @@ const WeFix = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7 lg:gap-10  2xl:gap-10 mt-5 md:mt-10 px-4 md:px-16 lg:px-10 2xl:px-28">
 
       {serviceData?.map((service, index) => (
-  <div key={index}>
+  <div data-aos="zoom-in-down" data-aos-duration="3000" key={index}>
     <img src={service.image} alt={service.title} className="" />
     <h1 className="text-2xl lg:text-3xl xl:text-2xl 2xl:text-3xl font-semibold mt-3 lg:mt-5 mb-3 lg:mb-5">
       {service.title}

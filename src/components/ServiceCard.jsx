@@ -10,7 +10,7 @@ const ServiceCard = () => {
       
       
       {/* Card 1 */}
-      <div className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
+      <div data-aos="fade-down" data-aos-duration="2000" className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
             <IoIosPhonePortrait className="text-7xl" />
@@ -27,7 +27,7 @@ const ServiceCard = () => {
       </div>
 
       {/* Card 2 */}
-      <div className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
+      <div data-aos="flip-left" data-aos-duration="2000" className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
             <IoLaptopOutline className="text-7xl" />
@@ -44,7 +44,7 @@ const ServiceCard = () => {
       </div>
 
       {/* Card 3 */}
-      <div className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
+      <div data-aos="flip-right" data-aos-duration="2000" className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
             <BsTabletLandscape className="text-7xl" />
@@ -61,7 +61,7 @@ const ServiceCard = () => {
       </div>
 
       {/* Card 4 */}
-      <div className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
+      <div data-aos="fade-up" data-aos-duration="2000" className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
             <SiVlcmediaplayer className="text-7xl" />

@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div className=" mt-16 md:mt-5">
       <div className="flex flex-col md:flex-row gap-8 md:gap-3 lg:gap-16 2xl:gap-28 relative">
-        <div data-aos="fade-down-right" data-aos-duration="1500" className="w-full md:w-1/2 ">
+        <div data-aos="fade-down-right" data-aos-duration="2000" className="w-full md:w-1/2 ">
           <img
             className="md:h-[600px] xl:h-[650px] 2xl:h-[750px]  w-full rounded-ee-4xl "
             src="banner-11.webp"
@@ -15,7 +15,7 @@ const Banner = () => {
         <div data-aos="zoom-in" data-aos-duration="3000" className="hidden lg:flex  absolute h-40 xl:h-44 w-40 xl:w-44 top-60 lg:left-100 xl:left-150 2xl:left-185">
             <img src="scratch.webp" alt="" />
         </div>
-        <div data-aos="fade-up-left" data-aos-duration="1500" className="w-full md:w-1/2 xl:pr-32 2xl:pr-64 space-y-3 lg:space-y-8 px-4">
+        <div data-aos="fade-up-left" data-aos-duration="2000" className="w-full md:w-1/2 xl:pr-32 2xl:pr-64 space-y-3 lg:space-y-8 px-4">
           <div className="flex items-center  gap-3 md:mt-4 xl:mt-16 2xl:mt-22">
             <div className="w-10 h-[2px] bg-gray-400"></div>
             <span className=" tracking-widest font-semibold text-gray-700">
