@@ -17,15 +17,15 @@ const Banner = () => {
         </div>
         <div data-aos="fade-up-left" data-aos-duration="2000" className="w-full md:w-1/2 xl:pr-32 2xl:pr-64 space-y-3 lg:space-y-8 px-4">
           <div className="flex items-center  gap-3 md:mt-4 xl:mt-16 2xl:mt-22">
-            <div className="w-10 h-[2px] bg-gray-400"></div>
-            <span className=" tracking-widest font-semibold text-gray-700">
+            <div className="w-10 h-[2px] bg-gray-400 "></div>
+            <span className=" tracking-widest font-semibold text-gray-700 dark:text-white">
               OFFICIALLY CERTIFIED
             </span>
           </div>
-          <h1 className="text-[#223035] font-semibold text-4xl lg:text-5xl xl:text-6xl">
+          <h1 className="text-[#223035] dark:text-white font-semibold text-4xl lg:text-5xl xl:text-6xl">
             Don't worry, we've got your gadget repair covered!
           </h1>
-          <p className="text-base text-gray-600">
+          <p className="text-base text-gray-600 dark:text-white">
             We’re passionate about keeping your gadgets in top shape. Our team
             of experienced technicians combines technical expertise with
             exceptional customer service to provide reliable repairs.
