@@ -31,7 +31,7 @@ const Page = () => {
         <div data-aos="fade-left" data-aos-duration="2000" className="w-full md:w-1/2 xl:pr-32 2xl:pr-64 space-y-3 lg:space-y-8 px-4 md:mt-20">
           <div className="flex items-center gap-3 md:mt-4 xl:mt-16 2xl:mt-22">
             <div className="w-10 h-[2px] bg-gray-400"></div>
-            <span className="tracking-widest font-semibold text-gray-700">
+            <span className="tracking-widest font-semibold text-gray-700 dark:text-white">
               CONTACT US
             </span>
           </div>
@@ -45,7 +45,7 @@ const Page = () => {
                 name="name"
                 required
                 placeholder="Enter your Name"
-                className="w-full px-4 py-2 border border-gray-200 rounded-lg text-gray-700 focus:outline-none"
+                className="w-full px-4 py-2 border border-gray-200 rounded-lg text-gray-700 dark:text-white  placeholder-gray-500 dark:placeholder-text-gray-200 focus:outline-none"
               />
             </div>
             <div data-aos="fade-up"
@@ -55,7 +55,7 @@ const Page = () => {
                 name="email"
                 required
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 border border-gray-200 rounded-lg text-gray-700 focus:outline-none"
+                className="w-full px-4 py-2 border border-gray-200 rounded-lg text-gray-700 dark:text-white  placeholder-gray-500 dark:placeholder-text-gray-200 focus:outline-none"
               />
             </div>
             <div data-aos="fade-up"
@@ -65,7 +65,7 @@ const Page = () => {
                 required
                 rows="7"
                 placeholder="Enter your message"
-                className="w-full px-4 py-2 border border-gray-200 rounded-lg text-gray-700 focus:outline-none resize-none"
+                className="w-full px-4 py-2 border border-gray-200 rounded-lg text-gray-700 dark:text-white  placeholder-gray-500 dark:placeholder-text-gray-200 focus:outline-none resize-none"
               ></textarea>
             </div>
 

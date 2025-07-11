@@ -116,7 +116,7 @@ const page = () => {
       <label className="block mb-1 font-medium">Choose Gadget</label>
       <select
         name="gadget"
-        className="w-full border border-gray-200 rounded-lg text-gray-700 dark:text-white p-2 placeholder-gray-500 dark:placeholder-white"
+        className="w-full border border-gray-200 rounded-lg text-gray-700 dark:text-white p-2 placeholder-gray-500 dark:placeholder-text-gray-200"
       >
         <option>Phone</option>
         <option>Laptop</option>
@@ -133,7 +133,7 @@ const page = () => {
         type="text"
         name="model"
         placeholder="iPhone 15 Pro Max"
-        className="w-full border border-gray-200 rounded-lg text-gray-700 dark:text-white p-2 placeholder-gray-500 dark:placeholder-white"
+        className="w-full border border-gray-200 rounded-lg text-gray-700 dark:text-white p-2 placeholder-gray-500 dark:placeholder-text-gray-200"
       />
     </div>
     <div>
@@ -142,7 +142,7 @@ const page = () => {
         type="date"
         name="date"
         min={new Date().toISOString().split("T")[0]} // This blocks past dates
-        className="w-full border border-gray-200 rounded-lg text-gray-700 dark:text-white p-2 placeholder-gray-500 dark:placeholder-white"
+        className="w-full border border-gray-200 rounded-lg p-2 text-gray-700 dark:text-white  placeholder-gray-500 dark:placeholder-text-gray-200"
       />
     </div>
   </div>
@@ -155,7 +155,7 @@ const page = () => {
       name="problem"
       rows="4"
       placeholder="Write your gadget problem"
-      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-white"
+      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200"
     ></textarea>
   </div>
 
@@ -167,7 +167,7 @@ const page = () => {
       type="text"
       name="name"
       placeholder="Name"
-      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-white"
+      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200"
     />
     <input
       readOnly
@@ -175,7 +175,7 @@ const page = () => {
       type="email"
       name="email"
       placeholder="Email Address"
-      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-white"
+      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200"
     />
     <input
       type="text"
@@ -186,7 +186,7 @@ const page = () => {
       onInput={(e) => {
         e.target.value = e.target.value.replace(/[^0-9]/g, "");
       }}
-      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-white"
+      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200"
     />
   </div>
 

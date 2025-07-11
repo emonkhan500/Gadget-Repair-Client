@@ -76,7 +76,7 @@ console.log(data)
                     type="text"
                     name="model"
                     placeholder="iPhone 15 Pro Max"
-                    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+                    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200 p-2"
                   />
 </div>
 
@@ -90,7 +90,7 @@ console.log(data)
                     type="text"
                     name="model"
                     placeholder="iPhone 15 Pro Max"
-                    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+                    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200 p-2"
                   />
                 </div>
                 <div>
@@ -99,7 +99,7 @@ console.log(data)
                  defaultValue={booking?.date}
                     type='date'
                     name="date"
-                    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+                    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200 p-2"
                   />
                 </div>
               </div>
@@ -115,7 +115,7 @@ console.log(data)
                   name="problem"
                   rows="4"
                   placeholder="Write your gadget problem"
-                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200 p-2"
                 ></textarea>
               </div>
   
@@ -127,7 +127,7 @@ console.log(data)
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200 p-2"
                 />
                 <input
                 readOnly
@@ -135,7 +135,7 @@ console.log(data)
                   type="email"
                   name="email"
                   placeholder="Email Address"
-                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200 p-2"
                 />
                 <input
                 defaultValue={booking?.phone}
@@ -147,7 +147,7 @@ console.log(data)
     onInput={(e) => {
       e.target.value = e.target.value.replace(/[^0-9]/g, '');
     }}
-    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
+    className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-text-gray-200 p-2"
   />
   
   
@@ -157,7 +157,7 @@ console.log(data)
               <button
               
                 type="submit"
-                className=" w-full bg-gray-700 text-white px-6 py-2 rounded-full hover:bg-gray-800"
+                className=" w-full bg-gray-700 dark:text-white text-white px-6 py-2 rounded-full hover:bg-gray-800"
               >
                 Update
               </button>
