@@ -44,11 +44,11 @@ const response = await signIn("credentials", {
     return (
         <div>
           
-         <div className='text-center mt-16 md:mt-26'>
+         <div className='text-center mt-16 md:mt-26 lg:mt-38'>
          <h2 className="animate__animated animate__bounceIn animate__slow text-3xl font-bold text-[#3BB77E] lg:mt-8 mb-2 text-[#C6E76C]">
             Welcome To Gadget Fix !
           </h2>
-          <p className="text-[#253D4E] text-lg font-semibold">
+          <p className="text-[#253D4E] dark:text-white text-lg font-semibold">
             Experience The Best Gadget Repairing Platform !
           </p>
          </div>
@@ -59,7 +59,7 @@ const response = await signIn("credentials", {
            
             <div className="mb-4 animate__animated animate__lightSpeedInLeft animate__slow">
               <label
-                className="text-[#253D4E] block  text-sm font-bold mb-2"
+                className="text-[#253D4E] dark:text-white dark:text-white block  text-sm font-bold mb-2"
                 htmlFor="email"
               >
                 Email
@@ -70,12 +70,12 @@ const response = await signIn("credentials", {
                 name="email"
                 required
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"
+                className="w-full px-4 py-2 border rounded-lg text-gray-700 dark:text-white  placeholder-gray-500 dark:placeholder-text-gray-200 focus:outline-none focus:border-green-500"
               />
             </div>
             <div className="mb-4 animate__animated animate__lightSpeedInRight animate__slow">
               <label
-                className=" text-[#253D4E] block  text-sm font-bold mb-2"
+                className=" text-[#253D4E] dark:text-white block  text-sm font-bold mb-2"
                 htmlFor="password"
               >
                 Password
@@ -86,7 +86,7 @@ const response = await signIn("credentials", {
                 name="pass"
                 required
                 placeholder="Enter your password"
-                className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"
+                className="w-full px-4 py-2 border rounded-lg text-gray-700 dark:text-white  placeholder-gray-500 dark:placeholder-text-gray-200 focus:outline-none focus:border-green-500"
               />
             </div>
             <div className="flex items-center justify-between mb-4 animate__animated animate__lightSpeedInLeft animate__slow">
@@ -95,28 +95,28 @@ const response = await signIn("credentials", {
                   type="checkbox"
                   className="form-checkbox h-4 w-4 text-[#3BB77E]"
                 />
-                <span className="ml-2 text-sm text-[#253D4E]">Remember me</span>
+                <span className="ml-2 text-sm text-[#253D4E] dark:text-white">Remember me</span>
               </label>
-              <a href="#" className="text-sm text-[#253D4E] hover:underline">
+              <a href="#" className="text-sm text-[#253D4E] dark:text-white hover:underline">
                 Forgot Password?
               </a>
             </div>
             <button
               type="submit"
-              className=" w-full text-[#253D4E] font-bold py-2 px-4 border rounded-lg  shadow-md  hover:shadow-lg transition-all duration-300"
+              className=" w-full text-[#253D4E] dark:text-white font-bold py-2 px-4 border rounded-lg  shadow-md  hover:shadow-lg transition-all duration-300"
             >
               Sign In
             </button>
           </form>
           <button onClick={handleGoogle}
             
-            className=" mt-4 w-full text-[#253D4E] font-bold py-2 px-4 rounded-lg border  shadow-md  hover:shadow-lg transition-all duration-300 flex items-center justify-center"
+            className=" mt-4 w-full text-[#253D4E] dark:text-white font-bold py-2 px-4 rounded-lg border  shadow-md  hover:shadow-lg transition-all duration-300 flex items-center justify-center"
           >
             <FaGoogle className="mr-3 text-[#3BB77E] " />
             Sign In with Google
           </button>
 
-          <p className="text-[#253D4E] mt-6 text-center font-bold">
+          <p className="text-[#253D4E] dark:text-white mt-6 text-center font-bold">
             New Here? {"  "}
             <Link href="/signup" className="font-bold text-lg text-[#C6E76C]">
               Sign UP

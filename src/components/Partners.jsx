@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination ,Autoplay} from "swiper/modules";
 const Partners = () => {
     return (
-        <div className='mt-16  lg:pl-20'>
+        <div className='mt-20 lg:mt-36  lg:pl-20'>
             <Swiper
         slidesPerView={6}
         spaceBetween={5}
