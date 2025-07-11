@@ -84,7 +84,7 @@ const    Nav = () => {
                 isOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >
-              <ul className="gap-[20px] text-[1rem] flex flex-col mt-3">
+              <ul className="gap-[20px] dark:text-black text-[1rem] flex flex-col mt-3">
                 {links.map((link, index) => (
                   <li key={index}>
                     <Link
