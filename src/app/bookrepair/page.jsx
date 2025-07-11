@@ -213,12 +213,12 @@ const page = () => {
           {/* Location Card */}
           <div  data-aos="fade-up" data-aos-duration="1500" className="bg-[#c6e76c] p-6 rounded-lg space-y-2">
             <div className="flex items-center gap-3">
-              <span className="text-3xl">
+              <span className="dark:text-black text-3xl">
                 <CiLocationOn />
               </span>
               <div>
-                <h2 className="font-semibold text-lg">Visit Our Workshop</h2>
-                <p>1920 Tangail, Dhaka, Bangladesh</p>
+                <h2 className="dark:text-black font-semibold text-lg">Visit Our Workshop</h2>
+                <p className="dark:text-black">1920 Tangail, Dhaka, Bangladesh</p>
               </div>
             </div>
           </div>

@@ -101,7 +101,7 @@ const    Nav = () => {
         </div>
 
         {/* Logo */}
-        <div className="dark:bg-white  xl:-ml-60 w-20 md:w-[140px] lg:w-[180px] xl:w-[200px]">
+        <div className="dark:bg-gray-300  xl:-ml-60 w-20 md:w-[140px] lg:w-[180px] xl:w-[200px]">
           <Link href='/'><img src="/logo.webp" alt="logo" /></Link>
         </div>
 

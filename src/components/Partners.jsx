@@ -37,7 +37,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-32 md:w-56 lg:w-40 xl:w-44 "
+              className="dark:bg-gray-300 w-32 md:w-56 lg:w-40 xl:w-44 "
               src="iphone.webp"
               alt="Cake & Milk"
             />
@@ -49,7 +49,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-32 md:w-44 lg:w-40 xl:w-44"
+              className="dark:bg-gray-300 w-32 md:w-44 lg:w-40 xl:w-44"
               src="lenevo.webp"
               alt="Cake & Milk"
             />
@@ -59,7 +59,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-32 md:w-44 lg:w-40 xl:w-44"
+              className="dark:bg-gray-300 w-32 md:w-44 lg:w-40 xl:w-44"
               src="hp.webp"
               alt="Cake & Milk"
             />
@@ -69,7 +69,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-32 md:w-44 lg:w-40 xl:w-44"
+              className="dark:bg-gray-300 w-32 md:w-44 lg:w-40 xl:w-44"
               src="sony.webp"
               alt="Cake & Milk"
             />
@@ -79,7 +79,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-32 md:w-44 lg:w-40 xl:w-44"
+              className="dark:bg-gray-300 w-32 md:w-44 lg:w-40 xl:w-44"
               src="p.webp"
               alt="Cake & Milk"
             />
@@ -89,7 +89,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-32 md:w-44 lg:w-40 xl:w-44"
+              className="dark:bg-gray-300 w-32 md:w-44 lg:w-40 xl:w-44"
               src="bose.webp"
               alt="Cake & Milk"
             />
@@ -99,7 +99,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-32 md:w-44 lg:w-40 xl:w-44"
+              className="dark:bg-gray-300 w-32 md:w-44 lg:w-40 xl:w-44"
               src="dell.webp"
               alt="Cake & Milk"
             />
@@ -109,7 +109,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-32 md:w-44 lg:w-40 xl:w-44"
+              className="dark:bg-gray-300 w-32 md:w-44 lg:w-40 xl:w-44"
               src="fuji.webp"
               alt="Cake & Milk"
             />
@@ -119,7 +119,7 @@ const Partners = () => {
         <SwiperSlide>
           
             <img
-              className="w-32 md:w-44 lg:w-40 xl:w-44"
+              className="dark:bg-gray-300 w-32 md:w-44 lg:w-40 xl:w-44"
               src="asus.webp"
               alt="Cake & Milk"
             />
