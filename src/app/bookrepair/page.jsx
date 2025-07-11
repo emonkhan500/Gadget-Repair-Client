@@ -109,103 +109,99 @@ const page = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 grid lg:grid-cols-3 gap-10 z-10">
         {/* Form Section */}
         <div   className="lg:col-span-2">
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            {/* Gadget & Model */}  
-            <div data-aos="flip-left" data-aos-duration="2000" className="grid md:grid-cols-3 gap-4">
-              <div>
-                <label className="block mb-1 font-medium">Choose Gadget</label>
-                <select
-                  name="gadget"
-                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-                >
-                  <option>Phone</option>
-                  <option>Laptop</option>
-                  <option>Tablet</option>
-                  <option>Smartwatch</option>
-                  <option>Software</option>
-                  <option>Game</option>
-                </select>
-              </div>
-              <div>
-                <label className="block mb-1 font-medium">
-                  Model of Gadget
-                </label>
-                <input
-                  required
-                  type="text"
-                  name="model"
-                  placeholder="iPhone 15 Pro Max"
-                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-                />
-              </div>
-              <div>
-                <label className="block mb-1 font-medium">
-                  Expected Delivery
-                </label>
-                <input
-                  type="date"
-                  name="date"
-                  min={new Date().toISOString().split("T")[0]} // This blocks past dates
-                  className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-                />
-              </div>
-            </div>
+        <form className="space-y-6" onSubmit={handleSubmit}>
+  {/* Gadget & Model */}
+  <div data-aos="flip-left" data-aos-duration="2000" className="grid md:grid-cols-3 gap-4">
+    <div>
+      <label className="block mb-1 font-medium">Choose Gadget</label>
+      <select
+        name="gadget"
+        className="w-full border border-gray-200 rounded-lg text-gray-700 dark:text-white p-2 placeholder-gray-500 dark:placeholder-white"
+      >
+        <option>Phone</option>
+        <option>Laptop</option>
+        <option>Tablet</option>
+        <option>Smartwatch</option>
+        <option>Software</option>
+        <option>Game</option>
+      </select>
+    </div>
+    <div>
+      <label className="block mb-1 font-medium">Model of Gadget</label>
+      <input
+        required
+        type="text"
+        name="model"
+        placeholder="iPhone 15 Pro Max"
+        className="w-full border border-gray-200 rounded-lg text-gray-700 dark:text-white p-2 placeholder-gray-500 dark:placeholder-white"
+      />
+    </div>
+    <div>
+      <label className="block mb-1 font-medium">Expected Delivery</label>
+      <input
+        type="date"
+        name="date"
+        min={new Date().toISOString().split("T")[0]} // This blocks past dates
+        className="w-full border border-gray-200 rounded-lg text-gray-700 dark:text-white p-2 placeholder-gray-500 dark:placeholder-white"
+      />
+    </div>
+  </div>
 
-            {/* Problem */}
-            <div>
-              <label className="block mb-1 font-medium">
-                Problem With Gadget?
-              </label>
-              <textarea
-                required
-                name="problem"
-                rows="4"
-                placeholder="Write your gadget problem"
-                className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-              ></textarea>
-            </div>
+  {/* Problem */}
+  <div>
+    <label className="block mb-1 font-medium">Problem With Gadget?</label>
+    <textarea
+      required
+      name="problem"
+      rows="4"
+      placeholder="Write your gadget problem"
+      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-white"
+    ></textarea>
+  </div>
 
-            {/* Name, Email, Phone */}
-            <div data-aos="flip-right" data-aos-duration="2000" className="grid md:grid-cols-3 gap-4">
-              <input
-                readOnly
-                defaultValue={data?.user?.name}
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-              />
-              <input
-                readOnly
-                defaultValue={data?.user?.email}
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-              />
-              <input
-                type="text"
-                name="phone"
-                placeholder="Phone"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                onInput={(e) => {
-                  e.target.value = e.target.value.replace(/[^0-9]/g, "");
-                }}
-                className="w-full border border-gray-200 rounded-lg text-gray-700 p-2"
-              />
-            </div>
+  {/* Name, Email, Phone */}
+  <div data-aos="flip-right" data-aos-duration="2000" className="grid md:grid-cols-3 gap-4">
+    <input
+      readOnly
+      defaultValue={data?.user?.name}
+      type="text"
+      name="name"
+      placeholder="Name"
+      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-white"
+    />
+    <input
+      readOnly
+      defaultValue={data?.user?.email}
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-white"
+    />
+    <input
+      type="text"
+      name="phone"
+      placeholder="Phone"
+      inputMode="numeric"
+      pattern="[0-9]*"
+      onInput={(e) => {
+        e.target.value = e.target.value.replace(/[^0-9]/g, "");
+      }}
+      className="w-full border border-gray-200 rounded-lg text-gray-700 p-2 placeholder-gray-500 dark:text-white dark:placeholder-white"
+    />
+  </div>
 
-            {/* Submit Button */}
-            <button
-            data-aos="fade-down" data-aos-duration="2500"
-              type="submit"
-              disabled={isCreating}
-              className="w-full  bg-gray-700 text-white px-6 py-2 rounded-full hover:bg-gray-800"
-            >
-              Book Now
-            </button>
-          </form>
+  {/* Submit Button */}
+  <button
+    data-aos="fade-down"
+    data-aos-duration="2500"
+    type="submit"
+    disabled={isCreating}
+    className="w-full bg-gray-700 dark:text-white text-white px-6 py-2 rounded-full hover:bg-gray-800"
+  >
+    Book Now
+  </button>
+</form>
+
         </div>
 
         {/* Sidebar Info */}
