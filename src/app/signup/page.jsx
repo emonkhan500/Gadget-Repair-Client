@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa6';
 
 import Lottie from "lottie-react";
@@ -10,6 +10,9 @@ import { useRouter } from 'next/navigation';
 const page = () => {
   const router = useRouter()
   const session =useSession()
+
+const[registerError,setregisterError]=useState('')
+
   // social login
 const handleGoogle= async ()=>{
   const response = await signIn('google')
@@ -22,27 +25,39 @@ const handleGoogle= async ()=>{
   }, [session, router]);
   
 
-  const handleSignUp=async (e)=>{
-e.preventDefault()
-
-const name = e.target.name.value;
-const email = e.target.email.value;
-const password = e.target.pass.value;
-// console.log(name, email, pass);
-const newUser= {name,email,password}
-console.log(newUser);
-const response = await fetch('/signup/api',{
-  method:'POST',
-  body:JSON.stringify(newUser),
-  headers:{
-    'content-type':'application/json'
-  }
-})
-console.log(response);
-if(response.status === 200){
-  e.target.reset()
-}
-  }
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    setregisterError(''); // Clear any previous error
+  
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.pass.value;
+  
+    const newUser = { name, email, password };
+  
+    try {
+      const response = await fetch('/signup/api', {
+        method: 'POST',
+        body: JSON.stringify(newUser),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        e.target.reset();
+      } else {
+        // If server sends error message in response body
+        setregisterError(data.message || 'Signup failed. Please try again.');
+      }
+    } catch (error) {
+      // Network or unexpected errors
+      setregisterError('Something went wrong. Please try again later.');
+      console.error('Signup error:', error);
+    }
+  };
     return (
         <div>
           <div className='text-center mt-16 md:mt-26 lg:mt-38 mb-8'>
@@ -120,6 +135,9 @@ if(response.status === 200){
                 Forgot Password?
               </a>
             </div>
+            {registerError && (
+              <p className="text-red-600 text-lg">{registerError}</p>
+            )}
             <button 
               type="submit"
               className=" w-full text-[#253D4E] dark:text-white font-bold py-2 px-4 border rounded-lg  shadow-md  hover:shadow-lg transition-all duration-300"
