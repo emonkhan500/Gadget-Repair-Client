@@ -10,6 +10,7 @@ import 'animate.css';
 const    Nav = () => {
   const router = useRouter();
   const session = useSession();
+  console.log(session)
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);

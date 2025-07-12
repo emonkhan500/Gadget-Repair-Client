@@ -7,6 +7,9 @@ import Lottie from "lottie-react";
 import login from "../../../public/login1.json";
 import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+
+import { ToastContainer, toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 const page = () => {
   const router = useRouter()
   const session =useSession()
@@ -14,52 +17,57 @@ const page = () => {
 const[registerError,setregisterError]=useState('')
 
   // social login
-const handleGoogle= async ()=>{
-  const response = await signIn('google')
-  }
-  useEffect(() => {
-    if (session?.status === "loading") return;
-    if (session?.status === "authenticated") {
-      router.push("/");
-    }
-  }, [session, router]);
+  const handleGoogle = async () => {
+    await signIn('google', { callbackUrl: '/' });
+  };
+  // useEffect(() => {
+  //   if (session.status === 'authenticated') {
+  //     router.push('/');
+  //   }
+  // }, [session, router]);
   
 
-  const handleSignUp = async (e) => {
-    e.preventDefault();
-    setregisterError(''); // Clear any previous error
   
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const password = e.target.pass.value;
-  
-    const newUser = { name, email, password };
-  
-    try {
-      const response = await fetch('/signup/api', {
-        method: 'POST',
-        body: JSON.stringify(newUser),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-  
-      const data = await response.json();
-  
-      if (response.ok) {
-        e.target.reset();
-      } else {
-        // If server sends error message in response body
-        setregisterError(data.message || 'Signup failed. Please try again.');
-      }
-    } catch (error) {
-      // Network or unexpected errors
-      setregisterError('Something went wrong. Please try again later.');
-      console.error('Signup error:', error);
+
+const handleSignUp = async (e) => {
+  e.preventDefault();
+  setregisterError('');
+
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const password = e.target.pass.value;
+
+  const newUser = { name, email, password };
+
+  try {
+    const response = await fetch('/signup/api', {
+      method: 'POST',
+      body: JSON.stringify(newUser),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      e.target.reset();
+      Swal.fire("User created successfully! Now sign in");
+      router.push("/signin");
+    } else {
+      // Server responded with an error status
+      setregisterError(data.message || 'Signup failed. Please try again.');
     }
-  };
+  } catch (error) {
+    // Network error or server is down
+    console.error('Signup error:', error);
+    setregisterError('Something went wrong. Please try again later.');
+  }
+};
+  
     return (
         <div>
+          <ToastContainer></ToastContainer>
           <div className='text-center mt-16 md:mt-26 lg:mt-38 mb-8'>
          <h2 className="animate__animated animate__bounceIn animate__slow text-3xl font-bold text-[#3BB77E] lg:mt-8 mb-2 text-[#C6E76C]">
             Welcome To Gadget Fix !

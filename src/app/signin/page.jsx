@@ -14,15 +14,14 @@ const page = () => {
   
 
 // social login
-const handleGoogle= async ()=>{
-const response = await signIn('google',)
-
-}
-useEffect(() => {
-  if (session.status === 'authenticated') {
-    router.push('/');
-  }
-}, [session, router]);
+const handleGoogle = async () => {
+  await signIn('google', { callbackUrl: '/' });
+};
+// useEffect(() => {
+//   if (session.status === 'authenticated') {
+//     router.push('/');
+//   }
+// }, [session, router]);
 
 
   // login with email
@@ -38,9 +37,10 @@ const response = await signIn("credentials", {
   redirect: false,
  
 });
-
-
-  }
+if (response.ok) {
+  router.push("/"); 
+} 
+}
     return (
         <div>
           
