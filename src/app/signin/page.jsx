@@ -44,11 +44,11 @@ if (response.ok) {
     return (
         <div>
           
-         <div className='text-center mt-16 md:mt-26 lg:mt-38'>
-         <h2 className="animate__animated animate__bounceIn animate__slow text-3xl font-bold text-[#3BB77E] lg:mt-8 mb-2 text-[#C6E76C]">
+         <div className='text-center mt-26 md:mt-28 lg:mt-38'>
+         <h2 className="animate__animated animate__bounceIn animate__slow text-2xl md:text-3xl font-bold text-[#3BB77E] lg:mt-8 mb-2 text-[#C6E76C]">
             Welcome To Gadget Fix !
           </h2>
-          <p className="text-[#253D4E] dark:text-white text-lg font-semibold">
+          <p className="text-[#253D4E] dark:text-white text-lg font-semibold mt-4 mb-4">
             Experience The Best Gadget Repairing Platform !
           </p>
          </div>
@@ -57,7 +57,7 @@ if (response.ok) {
                 <div className='w-full md:w-1/2 px-4'>
                 <form onSubmit={handleSignIn} className="mt-6">
            
-            <div className="mb-4 animate__animated animate__lightSpeedInLeft animate__slow">
+            <div className="mb-4 animate__animated animate__backInDown animate__slow">
               <label
                 className="text-[#253D4E] dark:text-white dark:text-white block  text-sm font-bold mb-2"
                 htmlFor="email"
@@ -73,7 +73,7 @@ if (response.ok) {
                 className="w-full px-4 py-2 border rounded-lg text-gray-700 dark:text-white  placeholder-gray-500 dark:placeholder-text-gray-200 focus:outline-none focus:border-green-500"
               />
             </div>
-            <div className="mb-4 animate__animated animate__lightSpeedInRight animate__slow">
+            <div className="mb-4 animate__animated animate__backInDown animate__slow">
               <label
                 className=" text-[#253D4E] dark:text-white block  text-sm font-bold mb-2"
                 htmlFor="password"
@@ -89,7 +89,7 @@ if (response.ok) {
                 className="w-full px-4 py-2 border rounded-lg text-gray-700 dark:text-white  placeholder-gray-500 dark:placeholder-text-gray-200 focus:outline-none focus:border-green-500"
               />
             </div>
-            <div className="flex items-center justify-between mb-4 animate__animated animate__lightSpeedInLeft animate__slow">
+            <div className="flex items-center justify-between mb-4 animate__animated animate__backInDown animate__slow">
               <label className="flex items-center">
                 <input
                   type="checkbox"
