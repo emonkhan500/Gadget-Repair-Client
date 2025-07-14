@@ -123,6 +123,7 @@ const    Nav = () => {
         {/* Auth Buttons */}
         <div className='space-x-3'>
           {!session.data ? (
+            
             <>
               <button onClick={handleSignIn} className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>SignIn</button>
               <button onClick={handleSignUp} className='bg-[#4d6c77] px-1 md:px-2 lg:px-4 text-white py-1 md:py-2 lg:py-3'>SignUp</button>
