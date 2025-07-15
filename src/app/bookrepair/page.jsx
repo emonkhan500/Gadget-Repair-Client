@@ -193,7 +193,7 @@ const page = () => {
   {/* Submit Button */}
   <button
     data-aos="fade-down"
-    data-aos-duration="2500"
+    data-aos-duration="2000"
     type="submit"
     disabled={isCreating}
     className="w-full bg-gray-700 dark:text-white text-white px-6 py-2 rounded-full hover:bg-gray-800"
