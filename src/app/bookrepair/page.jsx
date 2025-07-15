@@ -116,7 +116,7 @@ const page = () => {
       <label className="block mb-1 font-medium">Choose Gadget</label>
       <select
         name="gadget"
-        className="w-full border border-gray-200 rounded-lg text-gray-700 dark:text-white p-2 placeholder-gray-500 dark:placeholder-text-gray-200"
+        className="w-full border border-gray-200 rounded-lg text-gray-700 bg-white dark:bg-[#1F2937] dark:text-white dark:border-gray-600 p-2"
       >
         <option>Phone</option>
         <option>Laptop</option>
