@@ -30,7 +30,7 @@ export default function ClientLayoutWrapper({ children }) {
     );
   }
 
-  return (
+ return (
     <AuthProvider>
       <NavbarWrapper />
       <div>{children}</div>
