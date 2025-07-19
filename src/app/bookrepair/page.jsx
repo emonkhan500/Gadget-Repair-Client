@@ -17,6 +17,8 @@ const page = () => {
   const { data } = useSession();
   const [createBooking, { isLoading: isCreating }] = useCreateBookingMutation();
 
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 

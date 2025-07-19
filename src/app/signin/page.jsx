@@ -38,7 +38,7 @@ const response = await signIn("credentials", {
  
 });
 if (response.ok) {
-  router.push("/"); 
+  window.location.href = "/";
 } 
 }
     return (
