@@ -25,22 +25,20 @@ const handleGoogle = async () => {
 
 
   // login with email
-  const handleSignIn =async (e)=>{
-    e.preventDefault()
-
-
-const email = e.target.email.value;
-const password = e.target.pass.value;
-const response = await signIn("credentials", {
-  email,
-  password,
-  redirect: false,
- 
-});
-if (response.ok) {
-  window.location.href = "/";
-} 
-}
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+  
+    const email = e.target.email.value;
+    const password = e.target.pass.value;
+  
+    await signIn("credentials", {
+      email,
+      password,
+      redirect: true,
+      callbackUrl: "/", // ✅ redirect to home after login
+    });
+  };
+  
     return (
         <div>
           
