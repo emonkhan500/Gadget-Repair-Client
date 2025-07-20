@@ -52,8 +52,8 @@ const handleSignUp = async (e) => {
 
     if (response.ok) {
       e.target.reset();
-      Swal.fire("User created successfully! Now sign in");
-      router.push("/signin");
+      Swal.fire("User created successfully!");
+      window.location.href = "/";
     } else {
       // Server responded with an error status
       setregisterError(data.message || 'Signup failed. Please try again.');
