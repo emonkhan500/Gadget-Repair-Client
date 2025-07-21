@@ -9,19 +9,14 @@ import login from "../../../public/login1.json";
 import { useRouter } from 'next/navigation';
 
 const page = () => {
-  const router = useRouter()
-  const session =useSession()
+  
   
 
 // social login
 const handleGoogle = async () => {
   await signIn('google', { callbackUrl: '/' });
 };
-// useEffect(() => {
-//   if (session.status === 'authenticated') {
-//     router.push('/');
-//   }
-// }, [session, router]);
+
 
 
   // login with email
@@ -35,7 +30,7 @@ const handleGoogle = async () => {
       email,
       password,
       redirect: true,
-      callbackUrl: "/", // ✅ redirect to home after login
+      callbackUrl: "/", 
     });
   };
   
