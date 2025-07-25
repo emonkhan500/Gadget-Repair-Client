@@ -20,15 +20,8 @@ const[registerError,setregisterError]=useState('')
   const handleGoogle = async () => {
     await signIn('google', { callbackUrl: '/' });
   };
-  // useEffect(() => {
-  //   if (session.status === 'authenticated') {
-  //     router.push('/');
-  //   }
-  // }, [session, router]);
   
-
   
-
 const handleSignUp = async (e) => {
   e.preventDefault();
   setregisterError('');
