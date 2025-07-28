@@ -62,7 +62,7 @@ const handleSignUp = async (e) => {
         <div>
           <ToastContainer></ToastContainer>
           <div className='text-center mt-26 lg:mt-38 mb-8'>
-         <h2 className="animate__animated animate__bounceIn animate__slow text-2xl md:text-3xl font-bold text-[#3BB77E] lg:mt-8 mb-2 text-[#C6E76C]">
+         <h2  className="animate__animated animate__bounceIn animate__slow text-2xl md:text-3xl font-bold text-[#3BB77E] lg:mt-8 mb-2 text-[#C6E76C]">
             Welcome To Gadget Fix !
           </h2>
           <p className="text-[#253D4E] dark:text-white text-lg font-semibold mt-4 my-4">

@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const ServiceCard = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-1 xl:gap-6 mt-5 md:mt-10 px-3 md:px-16 lg:px-3 xl:px-28">
+    <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-1 xl:gap-6 mt-5 md:mt-10 px-3 md:px-16 lg:px-3 xl:px-28">
       
       
       {/* Card 1 */}
-      <div data-aos="fade-down" data-aos-duration="2000" className="bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
+      <div data-aos="fade-down" data-aos-duration="2000" className=" bg-[#4d6c77] rounded-lg flex flex-col justify-between p-4">
         <div className="space-y-3 flex-grow">
           <div className="flex items-center justify-between text-white px-10 lg:px-2 mt-3">
             <IoIosPhonePortrait className="text-7xl" />
