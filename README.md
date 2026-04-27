@@ -1,6 +1,6 @@
 # 🔧 Gadgets Fix
 
-A full-stack device repair booking web application with a seamless user experience, modern UI design, and smooth animations. Users can easily book, update, and manage repair services in one place.
+A full-stack device repair booking web application featuring a smooth, user-friendly experience, modern UI design, and engaging animations. Users can easily book repair services from the “Book a Repair” page, track, update, or delete their requests through the “Track a Repair” section, and manage all repair-related activities in one centralized platform.
 
 ## 🚀 Live Demo
 
@@ -13,7 +13,6 @@ A full-stack device repair booking web application with a seamless user experien
 - 💻 Fully responsive and interactive UI
 - 🔐 Secure authentication using **Auth.js**
 - 📦 Data storage handled with **MongoDB**
-- ☁️ Firebase integration for backend support
 - 🎨 Animated UI with **AOS** and **Animate.css**
 - 🔁 Efficient state management using **RTK Query**
 - 🧩 Multiple modern UI libraries for a clean and smooth interface
@@ -24,7 +23,7 @@ A full-stack device repair booking web application with a seamless user experien
 ## 🛠️ Tech Stack
 
 - **Frontend**: Next.js, Tailwind CSS, AOS, Animate.css, Auth.js  
-- **Backend**: MongoDB, Firebase  
+- **Backend**: MongoDB.  
 - **State Management**: RTK Query  
 
 
